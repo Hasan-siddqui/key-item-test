@@ -11,209 +11,6 @@
   text-transform: capitalize;
   transition: all .2s linear;
 }
-/* 88 */
-.gallery {
-  position: relative;
-  display: block;
-  max-width: 500px;
-  max-height: 300px;
-  border-radius: 4px;
-  overflow: hidden;
-  height: 220px !important;
-}
-
-.gallery .slick-list {
-  overflow: hidden;
-}
-
-.gallery .slick-slide {
-  outline: none !important;
-}
-
-.gallery-arrow {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 40px;
-  height: 40px;
-  font-size: 14px;
-  font-family: Helvetica, sans-serif;
-  line-height: 40px;
-  text-align: center;
-  background-color: #a54d5a;
-  z-index: 10;
-  cursor: pointer;
-  transition: background 0.3s ease;
-}
-
-.gallery-arrow:hover {
-  background: #D0DFE6;
-}
-
-.gallery-arrow.mod-prev {
-  left: 0;
-  border-radius: 0 4px 4px 0;
-}
-
-.gallery-arrow.mod-next {
-  right: 0;
-  border-radius: 4px 0 0 4px;
-}
-
-.gallery-item {
-  position: relative;
-  float: left;
-  vertical-align: middle;
-  text-align: center;
-}
-
-.gallery-img-holder {
-  display: inline-block;
-  width: auto;
-  height: auto;
-  max-width: 500px;
-  max-height: 500px;
-}
-
-.gallery-img {
-  width: 100%;
-  height: 100%;
-}
-
-.slick-lightbox .slick-arrow {
-  z-index: 10;
-}
-.slick-lightbox-slick-img{
-  width: 800px;
-}
-
-
-
-@keyframes zoomin {
-  0% {
-      transform: scale(1);
-  }
-
-  50% {
-      transform: scale(1.05);
-  }
-
-  100% {
-      transform: scale(1);
-  }
-}
-
-body {
-  background-color: #fff;
-}
-
-.container {
-  max-width: 1200px;
-}
-
-/* .gallery-item {
-  display: block;
-} */
-
-.lightbox-modal .modal-content {
-  background-color: var(--lightbox);
-}
-
-.lightbox-modal .btn-close {
-  position: absolute;
-  top: 1.25rem;
-  right: 1.25rem;
-  font-size: 1.25rem;
-  z-index: 10;
-  filter: invert(1) grayscale(100);
-}
-
-.lightbox-modal .modal-body {
-  display: flex;
-  align-items: center;
-  padding: 0;
-}
-
-.lightbox-modal .lightbox-content {
-  width: 100%;
-}
-
-.lightbox-modal .carousel-indicators {
-  margin-bottom: 0;
-}
-
-.lightbox-modal .carousel-indicators [data-bs-target] {
-  background-color: var(--carousel-text) !important;
-}
-
-.lightbox-modal .carousel-inner {
-  width: 75%;
-}
-
-.lightbox-modal .carousel-inner img {
-  animation: zoomin 10s linear infinite;
-}
-
-.lightbox-modal .carousel-item .carousel-caption {
-  right: 0;
-  bottom: 0;
-  left: 0;
-  padding-bottom: 2rem;
-  background-color: var(--lightbox);
-  color: var(--carousel-text) !important;
-}
-
-.lightbox-modal .carousel-control-prev,
-.lightbox-modal .carousel-control-next {
-  width: auto;
-}
-
-.lightbox-modal .carousel-control-prev {
-  left: 1.25rem;
-}
-
-.lightbox-modal .carousel-control-next {
-  right: 1.25rem;
-}
-
-@media (min-width: 1400px) {
-  .lightbox-modal .carousel-inner {
-      max-width: 60%;
-  }
-}
-
-[data-bs-theme="dark"] .lightbox-modal .carousel-control-next-icon,
-[data-bs-theme="dark"] .lightbox-modal .carousel-control-prev-icon {
-  filter: none;
-}
-
-.btn-fullscreen-enlarge,
-.btn-fullscreen-exit {
-  position: absolute;
-  top: 1.25rem;
-  right: 3.5rem;
-  z-index: 10;
-  border: 0;
-  background: transparent;
-  opacity: .6;
-  font-size: 1.25rem;
-}
-
-.bi {
-  display: inline-block;
-  width: 1em;
-  height: 1em;
-  vertical-align: -0.035em;
-  fill: currentcolor;
-}
-
-@media (min-width: 992px) {
-  .row-cols-lg-3>* {
-      flex: 0 0 auto;
-      width: 31.333333%;
-  }
-}
-/* 88 */
 
 .main {
   width: 100%;
@@ -231,14 +28,41 @@ body {
   margin-bottom: 50px;
   color: #6d2d37;
 }
+
 .content-text {
   height: 88px;
 }
+
 .content-text h3 {
-  width: 70%;
-  text-align: left;
+  width: 68%;
+  text-align: center;
   float: left;
+  margin: 4px 0 0 2px;
 }
+.more-btn {
+  margin-top: 8px;
+}
+
+.more-btn button {
+  display: inline-block;
+  outline: 0;
+  border: 0;
+  cursor: pointer;
+  background: #a54d5a;
+  color: #FFFFFF;
+  border-radius: 8px;
+  padding: 12px 12px 12px;
+  font-size: 12px;
+  font-weight: bolder;
+  line-height: 1;
+  transition: transform 200ms, background 200ms;
+}
+
+.more-btn button:hover {
+  transform: translateY(-2px);
+}
+
+
 .container .box-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
@@ -287,7 +111,8 @@ body {
   padding: 10px;
   border-radius: 0 0 10px 10px;
 }
-.image{
+
+.image {
   width: 100%;
 }
 
@@ -324,9 +149,11 @@ button.read-text:hover {
 i.fa.fa-play {
   margin-right: 6px;
 }
+
 i.fa.fa-pause {
   margin-right: 6px;
 }
+
 .hidden {
   display: none;
 }
@@ -389,7 +216,7 @@ i.fa.fa-pause {
 }
 
 .btn-2 {
-  max-width: 1169px;
+  max-width: 1072px;
   margin: 22px auto;
   /* text-align: center; */
 }
@@ -403,6 +230,106 @@ i.fa.fa-pause {
   box-shadow: inset 0px 3px 7px #d6d6e7;
   transform: translateY(2px);
 }
+
+
+/* Image crausal light box model start */
+.box.col-md-4 {
+  width: 31.333333%;
+}
+
+/* Indicators list style */
+.project-slide .carousel-indicators {
+  bottom: 0;
+  left: 0;
+  margin-left: 5px;
+  width: 100%;
+}
+
+/* Indicators list style */
+.project-slide .carousel-indicators li {
+  border: medium none;
+  border-radius: 0;
+  float: middle;
+  height: 35px;
+  margin-bottom: -10px;
+  margin-left: 0;
+  margin-right: 5px !important;
+  margin-top: 0;
+  width: 50px;
+  border-radius: 3px;
+}
+
+/* Indicators images style */
+.project-slide .carousel-indicators img {
+  border: 2px solid #b8770d;
+  border-radius: 3px;
+  float: left;
+  height: 35px;
+  left: 0;
+  width: 50px;
+  opacity: 0.7;
+}
+
+/* Indicators active image style */
+.project-slide .carousel-indicators .active img {
+  border: 2px solid #fca311;
+  opacity: 1;
+}
+
+/* carousel-control */
+.carousel-control {
+  color: #b8770d;
+  opacity: 0.5;
+}
+
+.carousel-control:hover,
+.carousel-control:focus {
+  color: #fca311;
+  opacity: 1;
+}
+
+.carousel-control.left,
+.carousel-control.right {
+  background: none !important;
+  filter: none !important;
+  progid: none !important;
+  opacity: 1;
+}
+
+.panel-body {
+  padding: 0;
+}
+
+.modal-open .modal {
+  background-color: #545252cc;
+}
+
+.panel {
+  margin: 0;
+  border: unset;
+  box-shadow: unset;
+}
+
+.close {
+  float: right;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1;
+  color: #A54D5A;
+  text-shadow: 0 1px 0 #fff;
+  filter: alpha(opacity=20);
+  opacity: 1;
+}
+.glyphicon{
+  color: #A54D5A;
+}
+.carousel-inner {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  height: 365px;
+}
+/* Image crausal light box model end */
 
 @media (max-width:450px) {
 

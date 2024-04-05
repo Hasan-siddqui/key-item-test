@@ -7,216 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-lightbox/0.2.12/slick-lightbox.css">
     <!-- custom css file link  -->
     <link rel="stylesheet" href="css/style.css">
-    <style>
-        .gallery {
-            position: relative;
-            display: block;
-            max-width: 500px;
-            max-height: 300px;
-            border-radius: 4px;
-            overflow: hidden;
-        }
-
-        .gallery .slick-list {
-            overflow: hidden;
-        }
-
-        .gallery .slick-slide {
-            outline: none !important;
-        }
-
-        .gallery-arrow {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            width: 40px;
-            height: 40px;
-            font-size: 14px;
-            font-family: Helvetica, sans-serif;
-            line-height: 40px;
-            text-align: center;
-            background-color: #a54d5a;
-            z-index: 10;
-            cursor: pointer;
-            transition: background 0.3s ease;
-        }
-
-        .gallery-arrow:hover {
-            background: #D0DFE6;
-        }
-
-        .gallery-arrow.mod-prev {
-            left: 0;
-            border-radius: 0 4px 4px 0;
-        }
-
-        .gallery-arrow.mod-next {
-            right: 0;
-            border-radius: 4px 0 0 4px;
-        }
-
-        .gallery-item {
-            position: relative;
-            float: left;
-            vertical-align: middle;
-            text-align: center;
-        }
-
-        .gallery-img-holder {
-            display: inline-block;
-            width: auto;
-            height: auto;
-            max-width: 500px;
-            max-height: 500px;
-        }
-
-        .gallery-img {
-            width: 100%;
-            height: 100%;
-        }
-
-        .slick-lightbox .slick-arrow {
-            z-index: 10;
-        }
-        .slick-lightbox-slick-img{
-            width: 800px;
-        }
-
-
-
-        @keyframes zoomin {
-            0% {
-                transform: scale(1);
-            }
-
-            50% {
-                transform: scale(1.05);
-            }
-
-            100% {
-                transform: scale(1);
-            }
-        }
-
-        body {
-            background-color: #fff;
-        }
-
-        .container {
-            max-width: 1200px;
-        }
-
-        /* .gallery-item {
-            display: block;
-        } */
-
-        .lightbox-modal .modal-content {
-            background-color: var(--lightbox);
-        }
-
-        .lightbox-modal .btn-close {
-            position: absolute;
-            top: 1.25rem;
-            right: 1.25rem;
-            font-size: 1.25rem;
-            z-index: 10;
-            filter: invert(1) grayscale(100);
-        }
-
-        .lightbox-modal .modal-body {
-            display: flex;
-            align-items: center;
-            padding: 0;
-        }
-
-        .lightbox-modal .lightbox-content {
-            width: 100%;
-        }
-
-        .lightbox-modal .carousel-indicators {
-            margin-bottom: 0;
-        }
-
-        .lightbox-modal .carousel-indicators [data-bs-target] {
-            background-color: var(--carousel-text) !important;
-        }
-
-        .lightbox-modal .carousel-inner {
-            width: 75%;
-        }
-
-        .lightbox-modal .carousel-inner img {
-            animation: zoomin 10s linear infinite;
-        }
-
-        .lightbox-modal .carousel-item .carousel-caption {
-            right: 0;
-            bottom: 0;
-            left: 0;
-            padding-bottom: 2rem;
-            background-color: var(--lightbox);
-            color: var(--carousel-text) !important;
-        }
-
-        .lightbox-modal .carousel-control-prev,
-        .lightbox-modal .carousel-control-next {
-            width: auto;
-        }
-
-        .lightbox-modal .carousel-control-prev {
-            left: 1.25rem;
-        }
-
-        .lightbox-modal .carousel-control-next {
-            right: 1.25rem;
-        }
-
-        @media (min-width: 1400px) {
-            .lightbox-modal .carousel-inner {
-                max-width: 60%;
-            }
-        }
-
-        [data-bs-theme="dark"] .lightbox-modal .carousel-control-next-icon,
-        [data-bs-theme="dark"] .lightbox-modal .carousel-control-prev-icon {
-            filter: none;
-        }
-
-        .btn-fullscreen-enlarge,
-        .btn-fullscreen-exit {
-            position: absolute;
-            top: 1.25rem;
-            right: 3.5rem;
-            z-index: 10;
-            border: 0;
-            background: transparent;
-            opacity: .6;
-            font-size: 1.25rem;
-        }
-
-        .bi {
-            display: inline-block;
-            width: 1em;
-            height: 1em;
-            vertical-align: -0.035em;
-            fill: currentcolor;
-        }
-
-        @media (min-width: 992px) {
-            .row-cols-lg-3>* {
-                flex: 0 0 auto;
-                width: 31.333333%;
-            }
-        }
-    </style>
-
 </head>
 
 <body>
@@ -231,23 +25,11 @@
             <h2 class="heading">KEY ITEMS:</h2>
 
             <div class="box-container">
-
-                <svg class="d-none" xmlns="http://www.w3.org/2000/svg">
-                    <symbol id="enlarge" viewBox="0 0 16 16">
-                        <path
-                            d="M1.5 1a.5.5 0 0 0-.5.5v4a.5.5 0 0 1-1 0v-4A1.5 1.5 0 0 1 1.5 0h4a.5.5 0 0 1 0 1h-4zM10 .5a.5.5 0 0 1 .5-.5h4A1.5 1.5 0 0 1 16 1.5v4a.5.5 0 0 1-1 0v-4a.5.5 0 0 0-.5-.5h-4a.5.5 0 0 1-.5-.5zM.5 10a.5.5 0 0 1 .5.5v4a.5.5 0 0 0 .5.5h4a.5.5 0 0 1 0 1h-4A1.5 1.5 0 0 1 0 14.5v-4a.5.5 0 0 1 .5-.5zm15 0a.5.5 0 0 1 .5.5v4a1.5 1.5 0 0 1-1.5 1.5h-4a.5.5 0 0 1 0-1h4a.5.5 0 0 0 .5-.5v-4a.5.5 0 0 1 .5-.5z" />
-                    </symbol>
-                    <symbol id="exit" viewBox="0 0 16 16">
-                        <path
-                            d="M5.5 0a.5.5 0 0 1 .5.5v4A1.5 1.5 0 0 1 4.5 6h-4a.5.5 0 0 1 0-1h4a.5.5 0 0 0 .5-.5v-4a.5.5 0 0 1 .5-.5zm5 0a.5.5 0 0 1 .5.5v4a.5.5 0 0 0 .5.5h4a.5.5 0 0 1 0 1h-4A1.5 1.5 0 0 1 10 4.5v-4a.5.5 0 0 1 .5-.5zM0 10.5a.5.5 0 0 1 .5-.5h4A1.5 1.5 0 0 1 6 11.5v4a.5.5 0 0 1-1 0v-4a.5.5 0 0 0-.5-.5h-4a.5.5 0 0 1-.5-.5zm10 1a1.5 1.5 0 0 1 1.5-1.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 0-.5.5v4a.5.5 0 0 1-1 0v-4z" />
-                    </symbol>
-                </svg>
                 <div class="photo-gallery">
-                    <!-- <div class="container"> -->
-                    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 gallery-grid">
-                        <div class="box">
-                            <div class="content">
-                                <div class="col">
+                    <div id="projects" class="container-fluid light-white-font">
+                        <div class="container dark-gray-font">
+                            <div class="row">
+                                <div class="box col-md-4 col">
                                     <div class="content-text">
                                         <h3>Toilet seats and support bars</h3>
                                         <button class="read-text">
@@ -256,29 +38,79 @@
                                             Read
                                         </button>
                                     </div>
-                                    <div class="gallery js-gallery">
-                                        <div class="gallery-item">
-                                            <div class="gallery-img-holder js-gallery-popup">
-                                                <img src="images/img-1.jpg" alt="" class="gallery-img">
-                                            </div>
+                                    <div class="panel panel-default fixed-width center-block" data-toggle="modal"
+                                        data-target="#projectA">
+                                        <div class="panel-body">
+                                            <a href="#">
+                                                <img class="img-responsive center-block" src="images/img-1.jpg" />
+                                            </a>
                                         </div>
-                                        <div class="gallery-item">
-                                            <div class="gallery-img-holder js-gallery-popup">
-                                                <img src="images/img-2.jpg" alt="" class="gallery-img">
-                                            </div>
+                                        <div class="more-btn">
+                                            <button>View More</button>
                                         </div>
-                                        <div class="gallery-item">
-                                            <div class="gallery-img-holder js-gallery-popup">
-                                                <img src="images/img-3.jpg" alt="" class="gallery-img">
+                                    </div>
+
+                                    <div class="modal fade" id="projectA">
+                                        <div class="modal-dialog">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <button type="button" class="close" data-dismiss="modal"
+                                                        title="Close"> <span
+                                                            class="glyphicon glyphicon-remove"></span></button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <div id="projectAsel" class="carousel slide project-slide"
+                                                        data-interval="false">
+                                                        <div class="carousel-inner">
+                                                            <div class="item active"> <img src="images/img-2.jpg"
+                                                                    alt="item1">
+                                                            </div>
+                                                            <div class="item"><img src="images/img-3.jpg" alt="item2">
+                                                            </div>
+                                                            <div class="item"> <img src="images/img-1.jpg" alt="item3">
+                                                            </div>
+                                                            <div class="item"> <img src="images/img-2.jpg" alt="item4">
+                                                            </div>
+                                                            <ol class="carousel-indicators">
+                                                                <li class="active" data-slide-to="0"
+                                                                    data-target="#projectAsel">
+                                                                    <img alt="" src="images/img-2.jpg">
+                                                                </li>
+                                                                <li class="" data-slide-to="1"
+                                                                    data-target="#projectAsel">
+                                                                    <img alt="" src="images/img-3.jpg">
+                                                                </li>
+                                                                <li class="" data-slide-to="2"
+                                                                    data-target="#projectAsel">
+                                                                    <img alt="" src="images/img-1.jpg">
+                                                                </li>
+                                                                <li class="" data-slide-to="3"
+                                                                    data-target="#projectAsel">
+                                                                    <img alt="" src="images/img-2.jpg">
+                                                                </li>
+                                                            </ol>
+                                                        </div>
+                                                        <a class="left carousel-control" href="#projectAsel"
+                                                            role="button" data-slide="prev"> <span
+                                                                class="glyphicon glyphicon-chevron-left"></span></a>
+                                                        <a class="right carousel-control" href="#projectAsel"
+                                                            role="button" data-slide="next"> <span
+                                                                class="glyphicon glyphicon-chevron-right"></span></a>
+                                                    </div>
+                                                    <div id="carouselHeader">
+                                                        <h3>Project A</h3>
+                                                    </div>
+
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button class="btn-sm close" type="button" data-dismiss="modal">Back
+                                                        To Key Item</button>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
-                        <div class="box">
-                            <div class="content">
-                                <div class="col">
+                                <div class="box col-md-4 col">
                                     <div class="content-text">
                                         <h3>Transfer boards</h3>
                                         <button class="read-text">
@@ -287,29 +119,78 @@
                                             Read
                                         </button>
                                     </div>
-                                    <div class="gallery js-gallery">
-                                        <div class="gallery-item">
-                                            <div class="gallery-img-holder js-gallery-popup">
-                                                <img src="https://fastly.picsum.photos/id/251/1200/800.webp?hmac=L1uuT4Hj7ehHMnJBSkh90qwTljJW6cBBsuGlUF5JRQQ" alt="" class="gallery-img">
-                                            </div>
+                                    <div class="panel panel-default fixed-width center-block" data-toggle="modal"
+                                        data-target="#projectA">
+                                        <div class="panel-body">
+                                            <a href="#">
+                                                <img class="img-responsive center-block" src="images/img-1.jpg" />
+                                            </a>
                                         </div>
-                                        <div class="gallery-item">
-                                            <div class="gallery-img-holder js-gallery-popup">
-                                                <img src="images/img-2.jpg" alt="" class="gallery-img">
-                                            </div>
+                                        <div class="more-btn">
+                                            <button>View More</button>
                                         </div>
-                                        <div class="gallery-item">
-                                            <div class="gallery-img-holder js-gallery-popup">
-                                                <img src="https://fastly.picsum.photos/id/197/1200/800.webp?hmac=UYRjtgJKMUExBJFpT5zAAr1UEFZ0gNLKw79ljhOIz3s" alt="" class="gallery-img">
+                                    </div>
+                                    <div class="modal fade" id="projectA">
+                                        <div class="modal-dialog">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <button type="button" class="close" data-dismiss="modal"
+                                                        title="Close"> <span
+                                                            class="glyphicon glyphicon-remove"></span></button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <div id="projectAsel" class="carousel slide project-slide"
+                                                        data-interval="false">
+                                                        <div class="carousel-inner">
+                                                            <div class="item active"> <img src="images/img-2.jpg"
+                                                                    alt="item1">
+                                                            </div>
+                                                            <div class="item"><img src="images/img-3.jpg" alt="item2">
+                                                            </div>
+                                                            <div class="item"> <img src="images/img-1.jpg" alt="item3">
+                                                            </div>
+                                                            <div class="item"> <img src="images/img-2.jpg" alt="item4">
+                                                            </div>
+                                                            <ol class="carousel-indicators">
+                                                                <li class="active" data-slide-to="0"
+                                                                    data-target="#projectAsel">
+                                                                    <img alt="" src="images/img-2.jpg">
+                                                                </li>
+                                                                <li class="" data-slide-to="1"
+                                                                    data-target="#projectAsel">
+                                                                    <img alt="" src="images/img-3.jpg">
+                                                                </li>
+                                                                <li class="" data-slide-to="2"
+                                                                    data-target="#projectAsel">
+                                                                    <img alt="" src="images/img-1.jpg">
+                                                                </li>
+                                                                <li class="" data-slide-to="3"
+                                                                    data-target="#projectAsel">
+                                                                    <img alt="" src="images/img-2.jpg">
+                                                                </li>
+                                                            </ol>
+                                                        </div>
+                                                        <a class="left carousel-control" href="#projectAsel"
+                                                            role="button" data-slide="prev"> <span
+                                                                class="glyphicon glyphicon-chevron-left"></span></a>
+                                                        <a class="right carousel-control" href="#projectAsel"
+                                                            role="button" data-slide="next"> <span
+                                                                class="glyphicon glyphicon-chevron-right"></span></a>
+                                                    </div>
+                                                    <div id="carouselHeader">
+                                                        <h3>Project A</h3>
+                                                    </div>
+
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button class="btn-sm close" type="button" data-dismiss="modal">Back
+                                                        To Key Item</button>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
-                        <div class="box">
-                            <div class="content">
-                                <div class="col">
+                                <div class="box col-md-4 col">
                                     <div class="content-text">
                                         <h3>Bathing chair, safety bars</h3>
                                         <button class="read-text">
@@ -318,29 +199,78 @@
                                             Read
                                         </button>
                                     </div>
-                                    <div class="gallery js-gallery">
-                                        <div class="gallery-item">
-                                            <div class="gallery-img-holder js-gallery-popup">
-                                                <img src="images/img-1.jpg" alt="" class="gallery-img">
-                                            </div>
+                                    <div class="panel panel-default fixed-width center-block" data-toggle="modal"
+                                        data-target="#projectA">
+                                        <div class="panel-body">
+                                            <a href="#">
+                                                <img class="img-responsive center-block" src="images/img-1.jpg" />
+                                            </a>
                                         </div>
-                                        <div class="gallery-item">
-                                            <div class="gallery-img-holder js-gallery-popup">
-                                                <img src="images/img-2.jpg" alt="" class="gallery-img">
-                                            </div>
+                                        <div class="more-btn">
+                                            <button>View More</button>
                                         </div>
-                                        <div class="gallery-item">
-                                            <div class="gallery-img-holder js-gallery-popup">
-                                                <img src="images/img-3.jpg" alt="" class="gallery-img">
+                                    </div>
+                                    <div class="modal fade" id="projectA">
+                                        <div class="modal-dialog">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <button type="button" class="close" data-dismiss="modal"
+                                                        title="Close"> <span
+                                                            class="glyphicon glyphicon-remove"></span></button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <div id="projectAsel" class="carousel slide project-slide"
+                                                        data-interval="false">
+                                                        <div class="carousel-inner">
+                                                            <div class="item active"> <img src="images/img-2.jpg"
+                                                                    alt="item1">
+                                                            </div>
+                                                            <div class="item"><img src="images/img-3.jpg" alt="item2">
+                                                            </div>
+                                                            <div class="item"> <img src="images/img-1.jpg" alt="item3">
+                                                            </div>
+                                                            <div class="item"> <img src="images/img-2.jpg" alt="item4">
+                                                            </div>
+                                                            <ol class="carousel-indicators">
+                                                                <li class="active" data-slide-to="0"
+                                                                    data-target="#projectAsel">
+                                                                    <img alt="" src="images/img-2.jpg">
+                                                                </li>
+                                                                <li class="" data-slide-to="1"
+                                                                    data-target="#projectAsel">
+                                                                    <img alt="" src="images/img-3.jpg">
+                                                                </li>
+                                                                <li class="" data-slide-to="2"
+                                                                    data-target="#projectAsel">
+                                                                    <img alt="" src="images/img-1.jpg">
+                                                                </li>
+                                                                <li class="" data-slide-to="3"
+                                                                    data-target="#projectAsel">
+                                                                    <img alt="" src="images/img-2.jpg">
+                                                                </li>
+                                                            </ol>
+                                                        </div>
+                                                        <a class="left carousel-control" href="#projectAsel"
+                                                            role="button" data-slide="prev"> <span
+                                                                class="glyphicon glyphicon-chevron-left"></span></a>
+                                                        <a class="right carousel-control" href="#projectAsel"
+                                                            role="button" data-slide="next"> <span
+                                                                class="glyphicon glyphicon-chevron-right"></span></a>
+                                                    </div>
+                                                    <div id="carouselHeader">
+                                                        <h3>Project A</h3>
+                                                    </div>
+
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button class="btn-sm close" type="button" data-dismiss="modal">Back
+                                                        To Key Item</button>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
-                        <div class="box">
-                            <div class="content">
-                                <div class="col">
+                                <div class="box col-md-4 col">
                                     <div class="content-text">
                                         <h3>Soaping glove</h3>
                                         <button class="read-text">
@@ -349,29 +279,78 @@
                                             Read
                                         </button>
                                     </div>
-                                    <div class="gallery js-gallery">
-                                        <div class="gallery-item">
-                                            <div class="gallery-img-holder js-gallery-popup">
-                                                <img src="images/img-1.jpg" alt="" class="gallery-img">
-                                            </div>
+                                    <div class="panel panel-default fixed-width center-block" data-toggle="modal"
+                                        data-target="#projectA">
+                                        <div class="panel-body">
+                                            <a href="#">
+                                                <img class="img-responsive center-block" src="images/img-1.jpg" />
+                                            </a>
                                         </div>
-                                        <div class="gallery-item">
-                                            <div class="gallery-img-holder js-gallery-popup">
-                                                <img src="images/img-2.jpg" alt="" class="gallery-img">
-                                            </div>
+                                        <div class="more-btn">
+                                            <button>View More</button>
                                         </div>
-                                        <div class="gallery-item">
-                                            <div class="gallery-img-holder js-gallery-popup">
-                                                <img src="images/img-3.jpg" alt="" class="gallery-img">
+                                    </div>
+                                    <div class="modal fade" id="projectA">
+                                        <div class="modal-dialog">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <button type="button" class="close" data-dismiss="modal"
+                                                        title="Close"> <span
+                                                            class="glyphicon glyphicon-remove"></span></button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <div id="projectAsel" class="carousel slide project-slide"
+                                                        data-interval="false">
+                                                        <div class="carousel-inner">
+                                                            <div class="item active"> <img src="images/img-2.jpg"
+                                                                    alt="item1">
+                                                            </div>
+                                                            <div class="item"><img src="images/img-3.jpg" alt="item2">
+                                                            </div>
+                                                            <div class="item"> <img src="images/img-1.jpg" alt="item3">
+                                                            </div>
+                                                            <div class="item"> <img src="images/img-2.jpg" alt="item4">
+                                                            </div>
+                                                            <ol class="carousel-indicators">
+                                                                <li class="active" data-slide-to="0"
+                                                                    data-target="#projectAsel">
+                                                                    <img alt="" src="images/img-2.jpg">
+                                                                </li>
+                                                                <li class="" data-slide-to="1"
+                                                                    data-target="#projectAsel">
+                                                                    <img alt="" src="images/img-3.jpg">
+                                                                </li>
+                                                                <li class="" data-slide-to="2"
+                                                                    data-target="#projectAsel">
+                                                                    <img alt="" src="images/img-1.jpg">
+                                                                </li>
+                                                                <li class="" data-slide-to="3"
+                                                                    data-target="#projectAsel">
+                                                                    <img alt="" src="images/img-2.jpg">
+                                                                </li>
+                                                            </ol>
+                                                        </div>
+                                                        <a class="left carousel-control" href="#projectAsel"
+                                                            role="button" data-slide="prev"> <span
+                                                                class="glyphicon glyphicon-chevron-left"></span></a>
+                                                        <a class="right carousel-control" href="#projectAsel"
+                                                            role="button" data-slide="next"> <span
+                                                                class="glyphicon glyphicon-chevron-right"></span></a>
+                                                    </div>
+                                                    <div id="carouselHeader">
+                                                        <h3>Project A</h3>
+                                                    </div>
+
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button class="btn-sm close" type="button" data-dismiss="modal">Back
+                                                        To Key Item</button>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
-                        <div class="box">
-                            <div class="content">
-                                <div class="col">
+                                <div class="box col-md-4 col">
                                     <div class="content-text">
                                         <h3>Drying and covering towel robe</h3>
                                         <button class="read-text">
@@ -380,29 +359,78 @@
                                             Read
                                         </button>
                                     </div>
-                                    <div class="gallery js-gallery">
-                                        <div class="gallery-item">
-                                            <div class="gallery-img-holder js-gallery-popup">
-                                                <img src="images/img-1.jpg" alt="" class="gallery-img">
-                                            </div>
+                                    <div class="panel panel-default fixed-width center-block" data-toggle="modal"
+                                        data-target="#projectA">
+                                        <div class="panel-body">
+                                            <a href="#">
+                                                <img class="img-responsive center-block" src="images/img-1.jpg" />
+                                            </a>
                                         </div>
-                                        <div class="gallery-item">
-                                            <div class="gallery-img-holder js-gallery-popup">
-                                                <img src="images/img-2.jpg" alt="" class="gallery-img">
-                                            </div>
+                                        <div class="more-btn">
+                                            <button>View More</button>
                                         </div>
-                                        <div class="gallery-item">
-                                            <div class="gallery-img-holder js-gallery-popup">
-                                                <img src="images/img-3.jpg" alt="" class="gallery-img">
+                                    </div>
+                                    <div class="modal fade" id="projectA">
+                                        <div class="modal-dialog">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <button type="button" class="close" data-dismiss="modal"
+                                                        title="Close"> <span
+                                                            class="glyphicon glyphicon-remove"></span></button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <div id="projectAsel" class="carousel slide project-slide"
+                                                        data-interval="false">
+                                                        <div class="carousel-inner">
+                                                            <div class="item active"> <img src="images/img-2.jpg"
+                                                                    alt="item1">
+                                                            </div>
+                                                            <div class="item"><img src="images/img-3.jpg" alt="item2">
+                                                            </div>
+                                                            <div class="item"> <img src="images/img-1.jpg" alt="item3">
+                                                            </div>
+                                                            <div class="item"> <img src="images/img-2.jpg" alt="item4">
+                                                            </div>
+                                                            <ol class="carousel-indicators">
+                                                                <li class="active" data-slide-to="0"
+                                                                    data-target="#projectAsel">
+                                                                    <img alt="" src="images/img-2.jpg">
+                                                                </li>
+                                                                <li class="" data-slide-to="1"
+                                                                    data-target="#projectAsel">
+                                                                    <img alt="" src="images/img-3.jpg">
+                                                                </li>
+                                                                <li class="" data-slide-to="2"
+                                                                    data-target="#projectAsel">
+                                                                    <img alt="" src="images/img-1.jpg">
+                                                                </li>
+                                                                <li class="" data-slide-to="3"
+                                                                    data-target="#projectAsel">
+                                                                    <img alt="" src="images/img-2.jpg">
+                                                                </li>
+                                                            </ol>
+                                                        </div>
+                                                        <a class="left carousel-control" href="#projectAsel"
+                                                            role="button" data-slide="prev"> <span
+                                                                class="glyphicon glyphicon-chevron-left"></span></a>
+                                                        <a class="right carousel-control" href="#projectAsel"
+                                                            role="button" data-slide="next"> <span
+                                                                class="glyphicon glyphicon-chevron-right"></span></a>
+                                                    </div>
+                                                    <div id="carouselHeader">
+                                                        <h3>Project A</h3>
+                                                    </div>
+
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button class="btn-sm close" type="button" data-dismiss="modal">Back
+                                                        To Key Item</button>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
-                        <div class="box">
-                            <div class="content">
-                                <div class="col">
+                                <div class="box col-md-4 col">
                                     <div class="content-text">
                                         <h3>Pull down/out hangers</h3>
                                         <button class="read-text">
@@ -411,29 +439,78 @@
                                             Read
                                         </button>
                                     </div>
-                                    <div class="gallery js-gallery">
-                                        <div class="gallery-item">
-                                            <div class="gallery-img-holder js-gallery-popup">
-                                                <img src="images/img-1.jpg" alt="" class="gallery-img">
-                                            </div>
+                                    <div class="panel panel-default fixed-width center-block" data-toggle="modal"
+                                        data-target="#projectA">
+                                        <div class="panel-body">
+                                            <a href="#">
+                                                <img class="img-responsive center-block" src="images/img-1.jpg" />
+                                            </a>
                                         </div>
-                                        <div class="gallery-item">
-                                            <div class="gallery-img-holder js-gallery-popup">
-                                                <img src="images/img-2.jpg" alt="" class="gallery-img">
-                                            </div>
+                                        <div class="more-btn">
+                                            <button>View More</button>
                                         </div>
-                                        <div class="gallery-item">
-                                            <div class="gallery-img-holder js-gallery-popup">
-                                                <img src="images/img-3.jpg" alt="" class="gallery-img">
+                                    </div>
+                                    <div class="modal fade" id="projectA">
+                                        <div class="modal-dialog">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <button type="button" class="close" data-dismiss="modal"
+                                                        title="Close"> <span
+                                                            class="glyphicon glyphicon-remove"></span></button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <div id="projectAsel" class="carousel slide project-slide"
+                                                        data-interval="false">
+                                                        <div class="carousel-inner">
+                                                            <div class="item active"> <img src="images/img-2.jpg"
+                                                                    alt="item1">
+                                                            </div>
+                                                            <div class="item"><img src="images/img-3.jpg" alt="item2">
+                                                            </div>
+                                                            <div class="item"> <img src="images/img-1.jpg" alt="item3">
+                                                            </div>
+                                                            <div class="item"> <img src="images/img-2.jpg" alt="item4">
+                                                            </div>
+                                                            <ol class="carousel-indicators">
+                                                                <li class="active" data-slide-to="0"
+                                                                    data-target="#projectAsel">
+                                                                    <img alt="" src="images/img-2.jpg">
+                                                                </li>
+                                                                <li class="" data-slide-to="1"
+                                                                    data-target="#projectAsel">
+                                                                    <img alt="" src="images/img-3.jpg">
+                                                                </li>
+                                                                <li class="" data-slide-to="2"
+                                                                    data-target="#projectAsel">
+                                                                    <img alt="" src="images/img-1.jpg">
+                                                                </li>
+                                                                <li class="" data-slide-to="3"
+                                                                    data-target="#projectAsel">
+                                                                    <img alt="" src="images/img-2.jpg">
+                                                                </li>
+                                                            </ol>
+                                                        </div>
+                                                        <a class="left carousel-control" href="#projectAsel"
+                                                            role="button" data-slide="prev"> <span
+                                                                class="glyphicon glyphicon-chevron-left"></span></a>
+                                                        <a class="right carousel-control" href="#projectAsel"
+                                                            role="button" data-slide="next"> <span
+                                                                class="glyphicon glyphicon-chevron-right"></span></a>
+                                                    </div>
+                                                    <div id="carouselHeader">
+                                                        <h3>Project A</h3>
+                                                    </div>
+
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button class="btn-sm close" type="button" data-dismiss="modal">Back
+                                                        To Key Item</button>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
-                        <div class="box">
-                            <div class="content">
-                                <div class="col">
+                                <div class="box col-md-4 col">
                                     <div class="content-text">
                                         <h3>Safety alarm</h3>
                                         <button class="read-text">
@@ -442,29 +519,78 @@
                                             Read
                                         </button>
                                     </div>
-                                    <div class="gallery js-gallery">
-                                        <div class="gallery-item">
-                                            <div class="gallery-img-holder js-gallery-popup">
-                                                <img src="images/img-1.jpg" alt="" class="gallery-img">
-                                            </div>
+                                    <div class="panel panel-default fixed-width center-block" data-toggle="modal"
+                                        data-target="#projectA">
+                                        <div class="panel-body">
+                                            <a href="#">
+                                                <img class="img-responsive center-block" src="images/img-1.jpg" />
+                                            </a>
                                         </div>
-                                        <div class="gallery-item">
-                                            <div class="gallery-img-holder js-gallery-popup">
-                                                <img src="images/img-2.jpg" alt="" class="gallery-img">
-                                            </div>
+                                        <div class="more-btn">
+                                            <button>View More</button>
                                         </div>
-                                        <div class="gallery-item">
-                                            <div class="gallery-img-holder js-gallery-popup">
-                                                <img src="images/img-3.jpg" alt="" class="gallery-img">
+                                    </div>
+                                    <div class="modal fade" id="projectA">
+                                        <div class="modal-dialog">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <button type="button" class="close" data-dismiss="modal"
+                                                        title="Close"> <span
+                                                            class="glyphicon glyphicon-remove"></span></button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <div id="projectAsel" class="carousel slide project-slide"
+                                                        data-interval="false">
+                                                        <div class="carousel-inner">
+                                                            <div class="item active"> <img src="images/img-2.jpg"
+                                                                    alt="item1">
+                                                            </div>
+                                                            <div class="item"><img src="images/img-3.jpg" alt="item2">
+                                                            </div>
+                                                            <div class="item"> <img src="images/img-1.jpg" alt="item3">
+                                                            </div>
+                                                            <div class="item"> <img src="images/img-2.jpg" alt="item4">
+                                                            </div>
+                                                            <ol class="carousel-indicators">
+                                                                <li class="active" data-slide-to="0"
+                                                                    data-target="#projectAsel">
+                                                                    <img alt="" src="images/img-2.jpg">
+                                                                </li>
+                                                                <li class="" data-slide-to="1"
+                                                                    data-target="#projectAsel">
+                                                                    <img alt="" src="images/img-3.jpg">
+                                                                </li>
+                                                                <li class="" data-slide-to="2"
+                                                                    data-target="#projectAsel">
+                                                                    <img alt="" src="images/img-1.jpg">
+                                                                </li>
+                                                                <li class="" data-slide-to="3"
+                                                                    data-target="#projectAsel">
+                                                                    <img alt="" src="images/img-2.jpg">
+                                                                </li>
+                                                            </ol>
+                                                        </div>
+                                                        <a class="left carousel-control" href="#projectAsel"
+                                                            role="button" data-slide="prev"> <span
+                                                                class="glyphicon glyphicon-chevron-left"></span></a>
+                                                        <a class="right carousel-control" href="#projectAsel"
+                                                            role="button" data-slide="next"> <span
+                                                                class="glyphicon glyphicon-chevron-right"></span></a>
+                                                    </div>
+                                                    <div id="carouselHeader">
+                                                        <h3>Project A</h3>
+                                                    </div>
+
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button class="btn-sm close" type="button" data-dismiss="modal">Back
+                                                        To Key Item</button>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
-                        <div class="box">
-                            <div class="content">
-                                <div class="col">
+                                <div class="box col-md-4 col">
                                     <div class="content-text">
                                         <h3>Adapted clothing</h3>
                                         <button class="read-text">
@@ -473,29 +599,78 @@
                                             Read
                                         </button>
                                     </div>
-                                    <div class="gallery js-gallery">
-                                        <div class="gallery-item">
-                                            <div class="gallery-img-holder js-gallery-popup">
-                                                <img src="images/img-1.jpg" alt="" class="gallery-img">
-                                            </div>
+                                    <div class="panel panel-default fixed-width center-block" data-toggle="modal"
+                                        data-target="#projectA">
+                                        <div class="panel-body">
+                                            <a href="#">
+                                                <img class="img-responsive center-block" src="images/img-1.jpg" />
+                                            </a>
                                         </div>
-                                        <div class="gallery-item">
-                                            <div class="gallery-img-holder js-gallery-popup">
-                                                <img src="images/img-2.jpg" alt="" class="gallery-img">
-                                            </div>
+                                        <div class="more-btn">
+                                            <button>View More</button>
                                         </div>
-                                        <div class="gallery-item">
-                                            <div class="gallery-img-holder js-gallery-popup">
-                                                <img src="images/img-3.jpg" alt="" class="gallery-img">
+                                    </div>
+                                    <div class="modal fade" id="projectA">
+                                        <div class="modal-dialog">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <button type="button" class="close" data-dismiss="modal"
+                                                        title="Close"> <span
+                                                            class="glyphicon glyphicon-remove"></span></button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <div id="projectAsel" class="carousel slide project-slide"
+                                                        data-interval="false">
+                                                        <div class="carousel-inner">
+                                                            <div class="item active"> <img src="images/img-2.jpg"
+                                                                    alt="item1">
+                                                            </div>
+                                                            <div class="item"><img src="images/img-3.jpg" alt="item2">
+                                                            </div>
+                                                            <div class="item"> <img src="images/img-1.jpg" alt="item3">
+                                                            </div>
+                                                            <div class="item"> <img src="images/img-2.jpg" alt="item4">
+                                                            </div>
+                                                            <ol class="carousel-indicators">
+                                                                <li class="active" data-slide-to="0"
+                                                                    data-target="#projectAsel">
+                                                                    <img alt="" src="images/img-2.jpg">
+                                                                </li>
+                                                                <li class="" data-slide-to="1"
+                                                                    data-target="#projectAsel">
+                                                                    <img alt="" src="images/img-3.jpg">
+                                                                </li>
+                                                                <li class="" data-slide-to="2"
+                                                                    data-target="#projectAsel">
+                                                                    <img alt="" src="images/img-1.jpg">
+                                                                </li>
+                                                                <li class="" data-slide-to="3"
+                                                                    data-target="#projectAsel">
+                                                                    <img alt="" src="images/img-2.jpg">
+                                                                </li>
+                                                            </ol>
+                                                        </div>
+                                                        <a class="left carousel-control" href="#projectAsel"
+                                                            role="button" data-slide="prev"> <span
+                                                                class="glyphicon glyphicon-chevron-left"></span></a>
+                                                        <a class="right carousel-control" href="#projectAsel"
+                                                            role="button" data-slide="next"> <span
+                                                                class="glyphicon glyphicon-chevron-right"></span></a>
+                                                    </div>
+                                                    <div id="carouselHeader">
+                                                        <h3>Project A</h3>
+                                                    </div>
+
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button class="btn-sm close" type="button" data-dismiss="modal">Back
+                                                        To Key Item</button>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
-                        <div class="box">
-                            <div class="content">
-                                <div class="col">
+                                <div class="box col-md-4 col">
                                     <div class="content-text">
                                         <h3>Thick handled toothbrush</h3>
                                         <button class="read-text">
@@ -504,29 +679,78 @@
                                             Read
                                         </button>
                                     </div>
-                                    <div class="gallery js-gallery">
-                                        <div class="gallery-item">
-                                            <div class="gallery-img-holder js-gallery-popup">
-                                                <img src="images/img-1.jpg" alt="" class="gallery-img">
-                                            </div>
+                                    <div class="panel panel-default fixed-width center-block" data-toggle="modal"
+                                        data-target="#projectA">
+                                        <div class="panel-body">
+                                            <a href="#">
+                                                <img class="img-responsive center-block" src="images/img-1.jpg" />
+                                            </a>
                                         </div>
-                                        <div class="gallery-item">
-                                            <div class="gallery-img-holder js-gallery-popup">
-                                                <img src="images/img-2.jpg" alt="" class="gallery-img">
-                                            </div>
+                                        <div class="more-btn">
+                                            <button>View More</button>
                                         </div>
-                                        <div class="gallery-item">
-                                            <div class="gallery-img-holder js-gallery-popup">
-                                                <img src="images/img-3.jpg" alt="" class="gallery-img">
+                                    </div>
+                                    <div class="modal fade" id="projectA">
+                                        <div class="modal-dialog">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <button type="button" class="close" data-dismiss="modal"
+                                                        title="Close"> <span
+                                                            class="glyphicon glyphicon-remove"></span></button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <div id="projectAsel" class="carousel slide project-slide"
+                                                        data-interval="false">
+                                                        <div class="carousel-inner">
+                                                            <div class="item active"> <img src="images/img-2.jpg"
+                                                                    alt="item1">
+                                                            </div>
+                                                            <div class="item"><img src="images/img-3.jpg" alt="item2">
+                                                            </div>
+                                                            <div class="item"> <img src="images/img-1.jpg" alt="item3">
+                                                            </div>
+                                                            <div class="item"> <img src="images/img-2.jpg" alt="item4">
+                                                            </div>
+                                                            <ol class="carousel-indicators">
+                                                                <li class="active" data-slide-to="0"
+                                                                    data-target="#projectAsel">
+                                                                    <img alt="" src="images/img-2.jpg">
+                                                                </li>
+                                                                <li class="" data-slide-to="1"
+                                                                    data-target="#projectAsel">
+                                                                    <img alt="" src="images/img-3.jpg">
+                                                                </li>
+                                                                <li class="" data-slide-to="2"
+                                                                    data-target="#projectAsel">
+                                                                    <img alt="" src="images/img-1.jpg">
+                                                                </li>
+                                                                <li class="" data-slide-to="3"
+                                                                    data-target="#projectAsel">
+                                                                    <img alt="" src="images/img-2.jpg">
+                                                                </li>
+                                                            </ol>
+                                                        </div>
+                                                        <a class="left carousel-control" href="#projectAsel"
+                                                            role="button" data-slide="prev"> <span
+                                                                class="glyphicon glyphicon-chevron-left"></span></a>
+                                                        <a class="right carousel-control" href="#projectAsel"
+                                                            role="button" data-slide="next"> <span
+                                                                class="glyphicon glyphicon-chevron-right"></span></a>
+                                                    </div>
+                                                    <div id="carouselHeader">
+                                                        <h3>Project A</h3>
+                                                    </div>
+
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button class="btn-sm close" type="button" data-dismiss="modal">Back
+                                                        To Key Item</button>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
-                        <div class="box">
-                            <div class="content">
-                                <div class="col">
+                                <div class="box col-md-4 col">
                                     <div class="content-text">
                                         <h3>Toothpaste squeezer</h3>
                                         <button class="read-text">
@@ -535,29 +759,78 @@
                                             Read
                                         </button>
                                     </div>
-                                    <div class="gallery js-gallery">
-                                        <div class="gallery-item">
-                                            <div class="gallery-img-holder js-gallery-popup">
-                                                <img src="images/img-1.jpg" alt="" class="gallery-img">
-                                            </div>
+                                    <div class="panel panel-default fixed-width center-block" data-toggle="modal"
+                                        data-target="#projectA">
+                                        <div class="panel-body">
+                                            <a href="#">
+                                                <img class="img-responsive center-block" src="images/img-1.jpg" />
+                                            </a>
                                         </div>
-                                        <div class="gallery-item">
-                                            <div class="gallery-img-holder js-gallery-popup">
-                                                <img src="images/img-2.jpg" alt="" class="gallery-img">
-                                            </div>
+                                        <div class="more-btn">
+                                            <button>View More</button>
                                         </div>
-                                        <div class="gallery-item">
-                                            <div class="gallery-img-holder js-gallery-popup">
-                                                <img src="images/img-3.jpg" alt="" class="gallery-img">
+                                    </div>
+                                    <div class="modal fade" id="projectA">
+                                        <div class="modal-dialog">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <button type="button" class="close" data-dismiss="modal"
+                                                        title="Close"> <span
+                                                            class="glyphicon glyphicon-remove"></span></button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <div id="projectAsel" class="carousel slide project-slide"
+                                                        data-interval="false">
+                                                        <div class="carousel-inner">
+                                                            <div class="item active"> <img src="images/img-2.jpg"
+                                                                    alt="item1">
+                                                            </div>
+                                                            <div class="item"><img src="images/img-3.jpg" alt="item2">
+                                                            </div>
+                                                            <div class="item"> <img src="images/img-1.jpg" alt="item3">
+                                                            </div>
+                                                            <div class="item"> <img src="images/img-2.jpg" alt="item4">
+                                                            </div>
+                                                            <ol class="carousel-indicators">
+                                                                <li class="active" data-slide-to="0"
+                                                                    data-target="#projectAsel">
+                                                                    <img alt="" src="images/img-2.jpg">
+                                                                </li>
+                                                                <li class="" data-slide-to="1"
+                                                                    data-target="#projectAsel">
+                                                                    <img alt="" src="images/img-3.jpg">
+                                                                </li>
+                                                                <li class="" data-slide-to="2"
+                                                                    data-target="#projectAsel">
+                                                                    <img alt="" src="images/img-1.jpg">
+                                                                </li>
+                                                                <li class="" data-slide-to="3"
+                                                                    data-target="#projectAsel">
+                                                                    <img alt="" src="images/img-2.jpg">
+                                                                </li>
+                                                            </ol>
+                                                        </div>
+                                                        <a class="left carousel-control" href="#projectAsel"
+                                                            role="button" data-slide="prev"> <span
+                                                                class="glyphicon glyphicon-chevron-left"></span></a>
+                                                        <a class="right carousel-control" href="#projectAsel"
+                                                            role="button" data-slide="next"> <span
+                                                                class="glyphicon glyphicon-chevron-right"></span></a>
+                                                    </div>
+                                                    <div id="carouselHeader">
+                                                        <h3>Project A</h3>
+                                                    </div>
+
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button class="btn-sm close" type="button" data-dismiss="modal">Back
+                                                        To Key Item</button>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
-                        <div class="box">
-                            <div class="content">
-                                <div class="col">
+                                <div class="box col-md-4 col">
                                     <div class="content-text">
                                         <h3>Adapted nail cutters and filer</h3>
                                         <button class="read-text">
@@ -566,29 +839,78 @@
                                             Read
                                         </button>
                                     </div>
-                                    <div class="gallery js-gallery">
-                                        <div class="gallery-item">
-                                            <div class="gallery-img-holder js-gallery-popup">
-                                                <img src="images/img-1.jpg" alt="" class="gallery-img">
-                                            </div>
+                                    <div class="panel panel-default fixed-width center-block" data-toggle="modal"
+                                        data-target="#projectA">
+                                        <div class="panel-body">
+                                            <a href="#">
+                                                <img class="img-responsive center-block" src="images/img-1.jpg" />
+                                            </a>
                                         </div>
-                                        <div class="gallery-item">
-                                            <div class="gallery-img-holder js-gallery-popup">
-                                                <img src="images/img-2.jpg" alt="" class="gallery-img">
-                                            </div>
+                                        <div class="more-btn">
+                                            <button>View More</button>
                                         </div>
-                                        <div class="gallery-item">
-                                            <div class="gallery-img-holder js-gallery-popup">
-                                                <img src="images/img-3.jpg" alt="" class="gallery-img">
+                                    </div>
+                                    <div class="modal fade" id="projectA">
+                                        <div class="modal-dialog">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <button type="button" class="close" data-dismiss="modal"
+                                                        title="Close"> <span
+                                                            class="glyphicon glyphicon-remove"></span></button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <div id="projectAsel" class="carousel slide project-slide"
+                                                        data-interval="false">
+                                                        <div class="carousel-inner">
+                                                            <div class="item active"> <img src="images/img-2.jpg"
+                                                                    alt="item1">
+                                                            </div>
+                                                            <div class="item"><img src="images/img-3.jpg" alt="item2">
+                                                            </div>
+                                                            <div class="item"> <img src="images/img-1.jpg" alt="item3">
+                                                            </div>
+                                                            <div class="item"> <img src="images/img-2.jpg" alt="item4">
+                                                            </div>
+                                                            <ol class="carousel-indicators">
+                                                                <li class="active" data-slide-to="0"
+                                                                    data-target="#projectAsel">
+                                                                    <img alt="" src="images/img-2.jpg">
+                                                                </li>
+                                                                <li class="" data-slide-to="1"
+                                                                    data-target="#projectAsel">
+                                                                    <img alt="" src="images/img-3.jpg">
+                                                                </li>
+                                                                <li class="" data-slide-to="2"
+                                                                    data-target="#projectAsel">
+                                                                    <img alt="" src="images/img-1.jpg">
+                                                                </li>
+                                                                <li class="" data-slide-to="3"
+                                                                    data-target="#projectAsel">
+                                                                    <img alt="" src="images/img-2.jpg">
+                                                                </li>
+                                                            </ol>
+                                                        </div>
+                                                        <a class="left carousel-control" href="#projectAsel"
+                                                            role="button" data-slide="prev"> <span
+                                                                class="glyphicon glyphicon-chevron-left"></span></a>
+                                                        <a class="right carousel-control" href="#projectAsel"
+                                                            role="button" data-slide="next"> <span
+                                                                class="glyphicon glyphicon-chevron-right"></span></a>
+                                                    </div>
+                                                    <div id="carouselHeader">
+                                                        <h3>Project A</h3>
+                                                    </div>
+
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button class="btn-sm close" type="button" data-dismiss="modal">Back
+                                                        To Key Item</button>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
-                        <div class="box">
-                            <div class="content">
-                                <div class="col">
+                                <div class="box col-md-4 col">
                                     <div class="content-text">
                                         <h3>Adapted shaver</h3>
                                         <button class="read-text">
@@ -597,29 +919,78 @@
                                             Read
                                         </button>
                                     </div>
-                                    <div class="gallery js-gallery">
-                                        <div class="gallery-item">
-                                            <div class="gallery-img-holder js-gallery-popup">
-                                                <img src="images/img-1.jpg" alt="" class="gallery-img">
-                                            </div>
+                                    <div class="panel panel-default fixed-width center-block" data-toggle="modal"
+                                        data-target="#projectA">
+                                        <div class="panel-body">
+                                            <a href="#">
+                                                <img class="img-responsive center-block" src="images/img-1.jpg" />
+                                            </a>
                                         </div>
-                                        <div class="gallery-item">
-                                            <div class="gallery-img-holder js-gallery-popup">
-                                                <img src="images/img-2.jpg" alt="" class="gallery-img">
-                                            </div>
+                                        <div class="more-btn">
+                                            <button>View More</button>
                                         </div>
-                                        <div class="gallery-item">
-                                            <div class="gallery-img-holder js-gallery-popup">
-                                                <img src="images/img-3.jpg" alt="" class="gallery-img">
+                                    </div>
+                                    <div class="modal fade" id="projectA">
+                                        <div class="modal-dialog">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <button type="button" class="close" data-dismiss="modal"
+                                                        title="Close"> <span
+                                                            class="glyphicon glyphicon-remove"></span></button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <div id="projectAsel" class="carousel slide project-slide"
+                                                        data-interval="false">
+                                                        <div class="carousel-inner">
+                                                            <div class="item active"> <img src="images/img-2.jpg"
+                                                                    alt="item1">
+                                                            </div>
+                                                            <div class="item"><img src="images/img-3.jpg" alt="item2">
+                                                            </div>
+                                                            <div class="item"> <img src="images/img-1.jpg" alt="item3">
+                                                            </div>
+                                                            <div class="item"> <img src="images/img-2.jpg" alt="item4">
+                                                            </div>
+                                                            <ol class="carousel-indicators">
+                                                                <li class="active" data-slide-to="0"
+                                                                    data-target="#projectAsel">
+                                                                    <img alt="" src="images/img-2.jpg">
+                                                                </li>
+                                                                <li class="" data-slide-to="1"
+                                                                    data-target="#projectAsel">
+                                                                    <img alt="" src="images/img-3.jpg">
+                                                                </li>
+                                                                <li class="" data-slide-to="2"
+                                                                    data-target="#projectAsel">
+                                                                    <img alt="" src="images/img-1.jpg">
+                                                                </li>
+                                                                <li class="" data-slide-to="3"
+                                                                    data-target="#projectAsel">
+                                                                    <img alt="" src="images/img-2.jpg">
+                                                                </li>
+                                                            </ol>
+                                                        </div>
+                                                        <a class="left carousel-control" href="#projectAsel"
+                                                            role="button" data-slide="prev"> <span
+                                                                class="glyphicon glyphicon-chevron-left"></span></a>
+                                                        <a class="right carousel-control" href="#projectAsel"
+                                                            role="button" data-slide="next"> <span
+                                                                class="glyphicon glyphicon-chevron-right"></span></a>
+                                                    </div>
+                                                    <div id="carouselHeader">
+                                                        <h3>Project A</h3>
+                                                    </div>
+
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button class="btn-sm close" type="button" data-dismiss="modal">Back
+                                                        To Key Item</button>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
-                        <div class="box">
-                            <div class="content">
-                                <div class="col">
+                                <div class="box col-md-4 col">
                                     <div class="content-text">
                                         <h3>Pull down/pull out shelves</h3>
                                         <button class="read-text">
@@ -628,29 +999,78 @@
                                             Read
                                         </button>
                                     </div>
-                                    <div class="gallery js-gallery">
-                                        <div class="gallery-item">
-                                            <div class="gallery-img-holder js-gallery-popup">
-                                                <img src="images/img-1.jpg" alt="" class="gallery-img">
-                                            </div>
+                                    <div class="panel panel-default fixed-width center-block" data-toggle="modal"
+                                        data-target="#projectA">
+                                        <div class="panel-body">
+                                            <a href="#">
+                                                <img class="img-responsive center-block" src="images/img-1.jpg" />
+                                            </a>
                                         </div>
-                                        <div class="gallery-item">
-                                            <div class="gallery-img-holder js-gallery-popup">
-                                                <img src="images/img-2.jpg" alt="" class="gallery-img">
-                                            </div>
+                                        <div class="more-btn">
+                                            <button>View More</button>
                                         </div>
-                                        <div class="gallery-item">
-                                            <div class="gallery-img-holder js-gallery-popup">
-                                                <img src="images/img-3.jpg" alt="" class="gallery-img">
+                                    </div>
+                                    <div class="modal fade" id="projectA">
+                                        <div class="modal-dialog">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <button type="button" class="close" data-dismiss="modal"
+                                                        title="Close"> <span
+                                                            class="glyphicon glyphicon-remove"></span></button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <div id="projectAsel" class="carousel slide project-slide"
+                                                        data-interval="false">
+                                                        <div class="carousel-inner">
+                                                            <div class="item active"> <img src="images/img-2.jpg"
+                                                                    alt="item1">
+                                                            </div>
+                                                            <div class="item"><img src="images/img-3.jpg" alt="item2">
+                                                            </div>
+                                                            <div class="item"> <img src="images/img-1.jpg" alt="item3">
+                                                            </div>
+                                                            <div class="item"> <img src="images/img-2.jpg" alt="item4">
+                                                            </div>
+                                                            <ol class="carousel-indicators">
+                                                                <li class="active" data-slide-to="0"
+                                                                    data-target="#projectAsel">
+                                                                    <img alt="" src="images/img-2.jpg">
+                                                                </li>
+                                                                <li class="" data-slide-to="1"
+                                                                    data-target="#projectAsel">
+                                                                    <img alt="" src="images/img-3.jpg">
+                                                                </li>
+                                                                <li class="" data-slide-to="2"
+                                                                    data-target="#projectAsel">
+                                                                    <img alt="" src="images/img-1.jpg">
+                                                                </li>
+                                                                <li class="" data-slide-to="3"
+                                                                    data-target="#projectAsel">
+                                                                    <img alt="" src="images/img-2.jpg">
+                                                                </li>
+                                                            </ol>
+                                                        </div>
+                                                        <a class="left carousel-control" href="#projectAsel"
+                                                            role="button" data-slide="prev"> <span
+                                                                class="glyphicon glyphicon-chevron-left"></span></a>
+                                                        <a class="right carousel-control" href="#projectAsel"
+                                                            role="button" data-slide="next"> <span
+                                                                class="glyphicon glyphicon-chevron-right"></span></a>
+                                                    </div>
+                                                    <div id="carouselHeader">
+                                                        <h3>Project A</h3>
+                                                    </div>
+
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button class="btn-sm close" type="button" data-dismiss="modal">Back
+                                                        To Key Item</button>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
-                        <div class="box">
-                            <div class="content">
-                                <div class="col">
+                                <div class="box col-md-4 col">
                                     <div class="content-text">
                                         <h3>Adapted chopping aids</h3>
                                         <button class="read-text">
@@ -659,60 +1079,78 @@
                                             Read
                                         </button>
                                     </div>
-                                    <div class="gallery js-gallery">
-                                        <div class="gallery-item">
-                                            <div class="gallery-img-holder js-gallery-popup">
-                                                <img src="images/img-1.jpg" alt="" class="gallery-img">
-                                            </div>
+                                    <div class="panel panel-default fixed-width center-block" data-toggle="modal"
+                                        data-target="#projectA">
+                                        <div class="panel-body">
+                                            <a href="#">
+                                                <img class="img-responsive center-block" src="images/img-1.jpg" />
+                                            </a>
                                         </div>
-                                        <div class="gallery-item">
-                                            <div class="gallery-img-holder js-gallery-popup">
-                                                <img src="images/img-2.jpg" alt="" class="gallery-img">
-                                            </div>
+                                        <div class="more-btn">
+                                            <button>View More</button>
                                         </div>
-                                        <div class="gallery-item">
-                                            <div class="gallery-img-holder js-gallery-popup">
-                                                <img src="images/img-3.jpg" alt="" class="gallery-img">
+                                    </div>
+                                    <div class="modal fade" id="projectA">
+                                        <div class="modal-dialog">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <button type="button" class="close" data-dismiss="modal"
+                                                        title="Close"> <span
+                                                            class="glyphicon glyphicon-remove"></span></button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <div id="projectAsel" class="carousel slide project-slide"
+                                                        data-interval="false">
+                                                        <div class="carousel-inner">
+                                                            <div class="item active"> <img src="images/img-2.jpg"
+                                                                    alt="item1">
+                                                            </div>
+                                                            <div class="item"><img src="images/img-3.jpg" alt="item2">
+                                                            </div>
+                                                            <div class="item"> <img src="images/img-1.jpg" alt="item3">
+                                                            </div>
+                                                            <div class="item"> <img src="images/img-2.jpg" alt="item4">
+                                                            </div>
+                                                            <ol class="carousel-indicators">
+                                                                <li class="active" data-slide-to="0"
+                                                                    data-target="#projectAsel">
+                                                                    <img alt="" src="images/img-2.jpg">
+                                                                </li>
+                                                                <li class="" data-slide-to="1"
+                                                                    data-target="#projectAsel">
+                                                                    <img alt="" src="images/img-3.jpg">
+                                                                </li>
+                                                                <li class="" data-slide-to="2"
+                                                                    data-target="#projectAsel">
+                                                                    <img alt="" src="images/img-1.jpg">
+                                                                </li>
+                                                                <li class="" data-slide-to="3"
+                                                                    data-target="#projectAsel">
+                                                                    <img alt="" src="images/img-2.jpg">
+                                                                </li>
+                                                            </ol>
+                                                        </div>
+                                                        <a class="left carousel-control" href="#projectAsel"
+                                                            role="button" data-slide="prev"> <span
+                                                                class="glyphicon glyphicon-chevron-left"></span></a>
+                                                        <a class="right carousel-control" href="#projectAsel"
+                                                            role="button" data-slide="next"> <span
+                                                                class="glyphicon glyphicon-chevron-right"></span></a>
+                                                    </div>
+                                                    <div id="carouselHeader">
+                                                        <h3>Project A</h3>
+                                                    </div>
+
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button class="btn-sm close" type="button" data-dismiss="modal">Back
+                                                        To Key Item</button>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
-                        <div class="box">
-                            <div class="content">
-                                <div class="col">
-                                    <div class="content-text">
-                                        <h3>Glass /plate holders</h3>
-                                        <button class="read-text">
-                                            <i class="fa fa-play" aria-hidden="true"></i>
-                                            <i class="fa fa-pause hidden" aria-hidden="true"></i>
-                                            Read
-                                        </button>
-                                    </div>
-                                    <div class="gallery js-gallery">
-                                        <div class="gallery-item">
-                                            <div class="gallery-img-holder js-gallery-popup">
-                                                <img src="images/img-1.jpg" alt="" class="gallery-img">
-                                            </div>
-                                        </div>
-                                        <div class="gallery-item">
-                                            <div class="gallery-img-holder js-gallery-popup">
-                                                <img src="images/img-2.jpg" alt="" class="gallery-img">
-                                            </div>
-                                        </div>
-                                        <div class="gallery-item">
-                                            <div class="gallery-img-holder js-gallery-popup">
-                                                <img src="images/img-3.jpg" alt="" class="gallery-img">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="box">
-                            <div class="content">
-                                <div class="col">
+                                <div class="box col-md-4 col">
                                     <div class="content-text">
                                         <h3>Adapted drinking aids</h3>
                                         <button class="read-text">
@@ -721,29 +1159,78 @@
                                             Read
                                         </button>
                                     </div>
-                                    <div class="gallery js-gallery">
-                                        <div class="gallery-item">
-                                            <div class="gallery-img-holder js-gallery-popup">
-                                                <img src="images/img-1.jpg" alt="" class="gallery-img">
-                                            </div>
+                                    <div class="panel panel-default fixed-width center-block" data-toggle="modal"
+                                        data-target="#projectA">
+                                        <div class="panel-body">
+                                            <a href="#">
+                                                <img class="img-responsive center-block" src="images/img-1.jpg" />
+                                            </a>
                                         </div>
-                                        <div class="gallery-item">
-                                            <div class="gallery-img-holder js-gallery-popup">
-                                                <img src="images/img-2.jpg" alt="" class="gallery-img">
-                                            </div>
+                                        <div class="more-btn">
+                                            <button>View More</button>
                                         </div>
-                                        <div class="gallery-item">
-                                            <div class="gallery-img-holder js-gallery-popup">
-                                                <img src="images/img-3.jpg" alt="" class="gallery-img">
+                                    </div>
+                                    <div class="modal fade" id="projectA">
+                                        <div class="modal-dialog">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <button type="button" class="close" data-dismiss="modal"
+                                                        title="Close"> <span
+                                                            class="glyphicon glyphicon-remove"></span></button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <div id="projectAsel" class="carousel slide project-slide"
+                                                        data-interval="false">
+                                                        <div class="carousel-inner">
+                                                            <div class="item active"> <img src="images/img-2.jpg"
+                                                                    alt="item1">
+                                                            </div>
+                                                            <div class="item"><img src="images/img-3.jpg" alt="item2">
+                                                            </div>
+                                                            <div class="item"> <img src="images/img-1.jpg" alt="item3">
+                                                            </div>
+                                                            <div class="item"> <img src="images/img-2.jpg" alt="item4">
+                                                            </div>
+                                                            <ol class="carousel-indicators">
+                                                                <li class="active" data-slide-to="0"
+                                                                    data-target="#projectAsel">
+                                                                    <img alt="" src="images/img-2.jpg">
+                                                                </li>
+                                                                <li class="" data-slide-to="1"
+                                                                    data-target="#projectAsel">
+                                                                    <img alt="" src="images/img-3.jpg">
+                                                                </li>
+                                                                <li class="" data-slide-to="2"
+                                                                    data-target="#projectAsel">
+                                                                    <img alt="" src="images/img-1.jpg">
+                                                                </li>
+                                                                <li class="" data-slide-to="3"
+                                                                    data-target="#projectAsel">
+                                                                    <img alt="" src="images/img-2.jpg">
+                                                                </li>
+                                                            </ol>
+                                                        </div>
+                                                        <a class="left carousel-control" href="#projectAsel"
+                                                            role="button" data-slide="prev"> <span
+                                                                class="glyphicon glyphicon-chevron-left"></span></a>
+                                                        <a class="right carousel-control" href="#projectAsel"
+                                                            role="button" data-slide="next"> <span
+                                                                class="glyphicon glyphicon-chevron-right"></span></a>
+                                                    </div>
+                                                    <div id="carouselHeader">
+                                                        <h3>Project A</h3>
+                                                    </div>
+
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button class="btn-sm close" type="button" data-dismiss="modal">Back
+                                                        To Key Item</button>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
-                        <div class="box">
-                            <div class="content">
-                                <div class="col">
+                                <div class="box col-md-4 col">
                                     <div class="content-text">
                                         <h3>Adapted spoons and cutlery</h3>
                                         <button class="read-text">
@@ -752,29 +1239,78 @@
                                             Read
                                         </button>
                                     </div>
-                                    <div class="gallery js-gallery">
-                                        <div class="gallery-item">
-                                            <div class="gallery-img-holder js-gallery-popup">
-                                                <img src="images/img-1.jpg" alt="" class="gallery-img">
-                                            </div>
+                                    <div class="panel panel-default fixed-width center-block" data-toggle="modal"
+                                        data-target="#projectA">
+                                        <div class="panel-body">
+                                            <a href="#">
+                                                <img class="img-responsive center-block" src="images/img-1.jpg" />
+                                            </a>
                                         </div>
-                                        <div class="gallery-item">
-                                            <div class="gallery-img-holder js-gallery-popup">
-                                                <img src="images/img-2.jpg" alt="" class="gallery-img">
-                                            </div>
+                                        <div class="more-btn">
+                                            <button>View More</button>
                                         </div>
-                                        <div class="gallery-item">
-                                            <div class="gallery-img-holder js-gallery-popup">
-                                                <img src="images/img-3.jpg" alt="" class="gallery-img">
+                                    </div>
+                                    <div class="modal fade" id="projectA">
+                                        <div class="modal-dialog">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <button type="button" class="close" data-dismiss="modal"
+                                                        title="Close"> <span
+                                                            class="glyphicon glyphicon-remove"></span></button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <div id="projectAsel" class="carousel slide project-slide"
+                                                        data-interval="false">
+                                                        <div class="carousel-inner">
+                                                            <div class="item active"> <img src="images/img-2.jpg"
+                                                                    alt="item1">
+                                                            </div>
+                                                            <div class="item"><img src="images/img-3.jpg" alt="item2">
+                                                            </div>
+                                                            <div class="item"> <img src="images/img-1.jpg" alt="item3">
+                                                            </div>
+                                                            <div class="item"> <img src="images/img-2.jpg" alt="item4">
+                                                            </div>
+                                                            <ol class="carousel-indicators">
+                                                                <li class="active" data-slide-to="0"
+                                                                    data-target="#projectAsel">
+                                                                    <img alt="" src="images/img-2.jpg">
+                                                                </li>
+                                                                <li class="" data-slide-to="1"
+                                                                    data-target="#projectAsel">
+                                                                    <img alt="" src="images/img-3.jpg">
+                                                                </li>
+                                                                <li class="" data-slide-to="2"
+                                                                    data-target="#projectAsel">
+                                                                    <img alt="" src="images/img-1.jpg">
+                                                                </li>
+                                                                <li class="" data-slide-to="3"
+                                                                    data-target="#projectAsel">
+                                                                    <img alt="" src="images/img-2.jpg">
+                                                                </li>
+                                                            </ol>
+                                                        </div>
+                                                        <a class="left carousel-control" href="#projectAsel"
+                                                            role="button" data-slide="prev"> <span
+                                                                class="glyphicon glyphicon-chevron-left"></span></a>
+                                                        <a class="right carousel-control" href="#projectAsel"
+                                                            role="button" data-slide="next"> <span
+                                                                class="glyphicon glyphicon-chevron-right"></span></a>
+                                                    </div>
+                                                    <div id="carouselHeader">
+                                                        <h3>Project A</h3>
+                                                    </div>
+
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button class="btn-sm close" type="button" data-dismiss="modal">Back
+                                                        To Key Item</button>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
-                        <div class="box">
-                            <div class="content">
-                                <div class="col">
+                                <div class="box col-md-4 col">
                                     <div class="content-text">
                                         <h3>Socks wearing aid</h3>
                                         <button class="read-text">
@@ -783,29 +1319,78 @@
                                             Read
                                         </button>
                                     </div>
-                                    <div class="gallery js-gallery">
-                                        <div class="gallery-item">
-                                            <div class="gallery-img-holder js-gallery-popup">
-                                                <img src="images/img-1.jpg" alt="" class="gallery-img">
-                                            </div>
+                                    <div class="panel panel-default fixed-width center-block" data-toggle="modal"
+                                        data-target="#projectA">
+                                        <div class="panel-body">
+                                            <a href="#">
+                                                <img class="img-responsive center-block" src="images/img-1.jpg" />
+                                            </a>
                                         </div>
-                                        <div class="gallery-item">
-                                            <div class="gallery-img-holder js-gallery-popup">
-                                                <img src="images/img-2.jpg" alt="" class="gallery-img">
-                                            </div>
+                                        <div class="more-btn">
+                                            <button>View More</button>
                                         </div>
-                                        <div class="gallery-item">
-                                            <div class="gallery-img-holder js-gallery-popup">
-                                                <img src="images/img-3.jpg" alt="" class="gallery-img">
+                                    </div>
+                                    <div class="modal fade" id="projectA">
+                                        <div class="modal-dialog">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <button type="button" class="close" data-dismiss="modal"
+                                                        title="Close"> <span
+                                                            class="glyphicon glyphicon-remove"></span></button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <div id="projectAsel" class="carousel slide project-slide"
+                                                        data-interval="false">
+                                                        <div class="carousel-inner">
+                                                            <div class="item active"> <img src="images/img-2.jpg"
+                                                                    alt="item1">
+                                                            </div>
+                                                            <div class="item"><img src="images/img-3.jpg" alt="item2">
+                                                            </div>
+                                                            <div class="item"> <img src="images/img-1.jpg" alt="item3">
+                                                            </div>
+                                                            <div class="item"> <img src="images/img-2.jpg" alt="item4">
+                                                            </div>
+                                                            <ol class="carousel-indicators">
+                                                                <li class="active" data-slide-to="0"
+                                                                    data-target="#projectAsel">
+                                                                    <img alt="" src="images/img-2.jpg">
+                                                                </li>
+                                                                <li class="" data-slide-to="1"
+                                                                    data-target="#projectAsel">
+                                                                    <img alt="" src="images/img-3.jpg">
+                                                                </li>
+                                                                <li class="" data-slide-to="2"
+                                                                    data-target="#projectAsel">
+                                                                    <img alt="" src="images/img-1.jpg">
+                                                                </li>
+                                                                <li class="" data-slide-to="3"
+                                                                    data-target="#projectAsel">
+                                                                    <img alt="" src="images/img-2.jpg">
+                                                                </li>
+                                                            </ol>
+                                                        </div>
+                                                        <a class="left carousel-control" href="#projectAsel"
+                                                            role="button" data-slide="prev"> <span
+                                                                class="glyphicon glyphicon-chevron-left"></span></a>
+                                                        <a class="right carousel-control" href="#projectAsel"
+                                                            role="button" data-slide="next"> <span
+                                                                class="glyphicon glyphicon-chevron-right"></span></a>
+                                                    </div>
+                                                    <div id="carouselHeader">
+                                                        <h3>Project A</h3>
+                                                    </div>
+
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button class="btn-sm close" type="button" data-dismiss="modal">Back
+                                                        To Key Item</button>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
-                        <div class="box">
-                            <div class="content">
-                                <div class="col">
+                                <div class="box col-md-4 col">
                                     <div class="content-text">
                                         <h3>Talking thermometer</h3>
                                         <button class="read-text">
@@ -814,60 +1399,78 @@
                                             Read
                                         </button>
                                     </div>
-                                    <div class="gallery js-gallery">
-                                        <div class="gallery-item">
-                                            <div class="gallery-img-holder js-gallery-popup">
-                                                <img src="images/img-1.jpg" alt="" class="gallery-img">
-                                            </div>
+                                    <div class="panel panel-default fixed-width center-block" data-toggle="modal"
+                                        data-target="#projectA">
+                                        <div class="panel-body">
+                                            <a href="#">
+                                                <img class="img-responsive center-block" src="images/img-1.jpg" />
+                                            </a>
                                         </div>
-                                        <div class="gallery-item">
-                                            <div class="gallery-img-holder js-gallery-popup">
-                                                <img src="images/img-2.jpg" alt="" class="gallery-img">
-                                            </div>
+                                        <div class="more-btn">
+                                            <button>View More</button>
                                         </div>
-                                        <div class="gallery-item">
-                                            <div class="gallery-img-holder js-gallery-popup">
-                                                <img src="images/img-3.jpg" alt="" class="gallery-img">
+                                    </div>
+                                    <div class="modal fade" id="projectA">
+                                        <div class="modal-dialog">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <button type="button" class="close" data-dismiss="modal"
+                                                        title="Close"> <span
+                                                            class="glyphicon glyphicon-remove"></span></button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <div id="projectAsel" class="carousel slide project-slide"
+                                                        data-interval="false">
+                                                        <div class="carousel-inner">
+                                                            <div class="item active"> <img src="images/img-2.jpg"
+                                                                    alt="item1">
+                                                            </div>
+                                                            <div class="item"><img src="images/img-3.jpg" alt="item2">
+                                                            </div>
+                                                            <div class="item"> <img src="images/img-1.jpg" alt="item3">
+                                                            </div>
+                                                            <div class="item"> <img src="images/img-2.jpg" alt="item4">
+                                                            </div>
+                                                            <ol class="carousel-indicators">
+                                                                <li class="active" data-slide-to="0"
+                                                                    data-target="#projectAsel">
+                                                                    <img alt="" src="images/img-2.jpg">
+                                                                </li>
+                                                                <li class="" data-slide-to="1"
+                                                                    data-target="#projectAsel">
+                                                                    <img alt="" src="images/img-3.jpg">
+                                                                </li>
+                                                                <li class="" data-slide-to="2"
+                                                                    data-target="#projectAsel">
+                                                                    <img alt="" src="images/img-1.jpg">
+                                                                </li>
+                                                                <li class="" data-slide-to="3"
+                                                                    data-target="#projectAsel">
+                                                                    <img alt="" src="images/img-2.jpg">
+                                                                </li>
+                                                            </ol>
+                                                        </div>
+                                                        <a class="left carousel-control" href="#projectAsel"
+                                                            role="button" data-slide="prev"> <span
+                                                                class="glyphicon glyphicon-chevron-left"></span></a>
+                                                        <a class="right carousel-control" href="#projectAsel"
+                                                            role="button" data-slide="next"> <span
+                                                                class="glyphicon glyphicon-chevron-right"></span></a>
+                                                    </div>
+                                                    <div id="carouselHeader">
+                                                        <h3>Project A</h3>
+                                                    </div>
+
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button class="btn-sm close" type="button" data-dismiss="modal">Back
+                                                        To Key Item</button>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
-                        <div class="box">
-                            <div class="content">
-                                <div class="col">
-                                    <div class="content-text">
-                                        <h3>Talking watch</h3>
-                                        <button class="read-text">
-                                            <i class="fa fa-play" aria-hidden="true"></i>
-                                            <i class="fa fa-pause hidden" aria-hidden="true"></i>
-                                            Read
-                                        </button>
-                                    </div>
-                                    <div class="gallery js-gallery">
-                                        <div class="gallery-item">
-                                            <div class="gallery-img-holder js-gallery-popup">
-                                                <img src="images/img-1.jpg" alt="" class="gallery-img">
-                                            </div>
-                                        </div>
-                                        <div class="gallery-item">
-                                            <div class="gallery-img-holder js-gallery-popup">
-                                                <img src="images/img-2.jpg" alt="" class="gallery-img">
-                                            </div>
-                                        </div>
-                                        <div class="gallery-item">
-                                            <div class="gallery-img-holder js-gallery-popup">
-                                                <img src="images/img-3.jpg" alt="" class="gallery-img">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="box">
-                            <div class="content">
-                                <div class="col">
+                                <div class="box col-md-4 col">
                                     <div class="content-text">
                                         <h3>Object reacher /picker</h3>
                                         <button class="read-text">
@@ -876,29 +1479,78 @@
                                             Read
                                         </button>
                                     </div>
-                                    <div class="gallery js-gallery">
-                                        <div class="gallery-item">
-                                            <div class="gallery-img-holder js-gallery-popup">
-                                                <img src="images/img-1.jpg" alt="" class="gallery-img">
-                                            </div>
+                                    <div class="panel panel-default fixed-width center-block" data-toggle="modal"
+                                        data-target="#projectA">
+                                        <div class="panel-body">
+                                            <a href="#">
+                                                <img class="img-responsive center-block" src="images/img-1.jpg" />
+                                            </a>
                                         </div>
-                                        <div class="gallery-item">
-                                            <div class="gallery-img-holder js-gallery-popup">
-                                                <img src="images/img-2.jpg" alt="" class="gallery-img">
-                                            </div>
+                                        <div class="more-btn">
+                                            <button>View More</button>
                                         </div>
-                                        <div class="gallery-item">
-                                            <div class="gallery-img-holder js-gallery-popup">
-                                                <img src="images/img-3.jpg" alt="" class="gallery-img">
+                                    </div>
+                                    <div class="modal fade" id="projectA">
+                                        <div class="modal-dialog">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <button type="button" class="close" data-dismiss="modal"
+                                                        title="Close"> <span
+                                                            class="glyphicon glyphicon-remove"></span></button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <div id="projectAsel" class="carousel slide project-slide"
+                                                        data-interval="false">
+                                                        <div class="carousel-inner">
+                                                            <div class="item active"> <img src="images/img-2.jpg"
+                                                                    alt="item1">
+                                                            </div>
+                                                            <div class="item"><img src="images/img-3.jpg" alt="item2">
+                                                            </div>
+                                                            <div class="item"> <img src="images/img-1.jpg" alt="item3">
+                                                            </div>
+                                                            <div class="item"> <img src="images/img-2.jpg" alt="item4">
+                                                            </div>
+                                                            <ol class="carousel-indicators">
+                                                                <li class="active" data-slide-to="0"
+                                                                    data-target="#projectAsel">
+                                                                    <img alt="" src="images/img-2.jpg">
+                                                                </li>
+                                                                <li class="" data-slide-to="1"
+                                                                    data-target="#projectAsel">
+                                                                    <img alt="" src="images/img-3.jpg">
+                                                                </li>
+                                                                <li class="" data-slide-to="2"
+                                                                    data-target="#projectAsel">
+                                                                    <img alt="" src="images/img-1.jpg">
+                                                                </li>
+                                                                <li class="" data-slide-to="3"
+                                                                    data-target="#projectAsel">
+                                                                    <img alt="" src="images/img-2.jpg">
+                                                                </li>
+                                                            </ol>
+                                                        </div>
+                                                        <a class="left carousel-control" href="#projectAsel"
+                                                            role="button" data-slide="prev"> <span
+                                                                class="glyphicon glyphicon-chevron-left"></span></a>
+                                                        <a class="right carousel-control" href="#projectAsel"
+                                                            role="button" data-slide="next"> <span
+                                                                class="glyphicon glyphicon-chevron-right"></span></a>
+                                                    </div>
+                                                    <div id="carouselHeader">
+                                                        <h3>Project A</h3>
+                                                    </div>
+
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button class="btn-sm close" type="button" data-dismiss="modal">Back
+                                                        To Key Item</button>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
-                        <div class="box">
-                            <div class="content">
-                                <div class="col">
+                                <div class="box col-md-4 col">
                                     <div class="content-text">
                                         <h3>Adjustable back support in bed</h3>
                                         <button class="read-text">
@@ -907,20 +1559,313 @@
                                             Read
                                         </button>
                                     </div>
-                                    <div class="gallery js-gallery">
-                                        <div class="gallery-item">
-                                            <div class="gallery-img-holder js-gallery-popup">
-                                                <img src="images/img-1.jpg" alt="" class="gallery-img">
+                                    <div class="panel panel-default fixed-width center-block" data-toggle="modal"
+                                        data-target="#projectA">
+                                        <div class="panel-body">
+                                            <a href="#">
+                                                <img class="img-responsive center-block" src="images/img-1.jpg" />
+                                            </a>
+                                        </div>
+                                        <div class="more-btn">
+                                            <button>View More</button>
+                                        </div>
+                                    </div>
+                                    <div class="modal fade" id="projectA">
+                                        <div class="modal-dialog">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <button type="button" class="close" data-dismiss="modal"
+                                                        title="Close"> <span
+                                                            class="glyphicon glyphicon-remove"></span></button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <div id="projectAsel" class="carousel slide project-slide"
+                                                        data-interval="false">
+                                                        <div class="carousel-inner">
+                                                            <div class="item active"> <img src="images/img-2.jpg"
+                                                                    alt="item1">
+                                                            </div>
+                                                            <div class="item"><img src="images/img-3.jpg" alt="item2">
+                                                            </div>
+                                                            <div class="item"> <img src="images/img-1.jpg" alt="item3">
+                                                            </div>
+                                                            <div class="item"> <img src="images/img-2.jpg" alt="item4">
+                                                            </div>
+                                                            <ol class="carousel-indicators">
+                                                                <li class="active" data-slide-to="0"
+                                                                    data-target="#projectAsel">
+                                                                    <img alt="" src="images/img-2.jpg">
+                                                                </li>
+                                                                <li class="" data-slide-to="1"
+                                                                    data-target="#projectAsel">
+                                                                    <img alt="" src="images/img-3.jpg">
+                                                                </li>
+                                                                <li class="" data-slide-to="2"
+                                                                    data-target="#projectAsel">
+                                                                    <img alt="" src="images/img-1.jpg">
+                                                                </li>
+                                                                <li class="" data-slide-to="3"
+                                                                    data-target="#projectAsel">
+                                                                    <img alt="" src="images/img-2.jpg">
+                                                                </li>
+                                                            </ol>
+                                                        </div>
+                                                        <a class="left carousel-control" href="#projectAsel"
+                                                            role="button" data-slide="prev"> <span
+                                                                class="glyphicon glyphicon-chevron-left"></span></a>
+                                                        <a class="right carousel-control" href="#projectAsel"
+                                                            role="button" data-slide="next"> <span
+                                                                class="glyphicon glyphicon-chevron-right"></span></a>
+                                                    </div>
+                                                    <div id="carouselHeader">
+                                                        <h3>Project A</h3>
+                                                    </div>
+
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button class="btn-sm close" type="button" data-dismiss="modal">Back
+                                                        To Key Item</button>
+                                                </div>
                                             </div>
                                         </div>
-                                        <div class="gallery-item">
-                                            <div class="gallery-img-holder js-gallery-popup">
-                                                <img src="images/img-2.jpg" alt="" class="gallery-img">
+                                    </div>
+                                </div>
+                                <div class="box col-md-4 col">
+                                    <div class="content-text">
+                                        <h3>Toilet seats and support bars</h3>
+                                        <button class="read-text">
+                                            <i class="fa fa-play" aria-hidden="true"></i>
+                                            <i class="fa fa-pause hidden" aria-hidden="true"></i>
+                                            Read
+                                        </button>
+                                    </div>
+                                    <div class="panel panel-default fixed-width center-block" data-toggle="modal"
+                                        data-target="#projectA">
+                                        <div class="panel-body">
+                                            <a href="#">
+                                                <img class="img-responsive center-block" src="images/img-1.jpg" />
+                                            </a>
+                                        </div>
+                                        <div class="more-btn">
+                                            <button>View More</button>
+                                        </div>
+                                    </div>
+                                    <div class="modal fade" id="projectA">
+                                        <div class="modal-dialog">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <button type="button" class="close" data-dismiss="modal"
+                                                        title="Close"> <span
+                                                            class="glyphicon glyphicon-remove"></span></button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <div id="projectAsel" class="carousel slide project-slide"
+                                                        data-interval="false">
+                                                        <div class="carousel-inner">
+                                                            <div class="item active"> <img src="images/img-2.jpg"
+                                                                    alt="item1">
+                                                            </div>
+                                                            <div class="item"><img src="images/img-3.jpg" alt="item2">
+                                                            </div>
+                                                            <div class="item"> <img src="images/img-1.jpg" alt="item3">
+                                                            </div>
+                                                            <div class="item"> <img src="images/img-2.jpg" alt="item4">
+                                                            </div>
+                                                            <ol class="carousel-indicators">
+                                                                <li class="active" data-slide-to="0"
+                                                                    data-target="#projectAsel">
+                                                                    <img alt="" src="images/img-2.jpg">
+                                                                </li>
+                                                                <li class="" data-slide-to="1"
+                                                                    data-target="#projectAsel">
+                                                                    <img alt="" src="images/img-3.jpg">
+                                                                </li>
+                                                                <li class="" data-slide-to="2"
+                                                                    data-target="#projectAsel">
+                                                                    <img alt="" src="images/img-1.jpg">
+                                                                </li>
+                                                                <li class="" data-slide-to="3"
+                                                                    data-target="#projectAsel">
+                                                                    <img alt="" src="images/img-2.jpg">
+                                                                </li>
+                                                            </ol>
+                                                        </div>
+                                                        <a class="left carousel-control" href="#projectAsel"
+                                                            role="button" data-slide="prev"> <span
+                                                                class="glyphicon glyphicon-chevron-left"></span></a>
+                                                        <a class="right carousel-control" href="#projectAsel"
+                                                            role="button" data-slide="next"> <span
+                                                                class="glyphicon glyphicon-chevron-right"></span></a>
+                                                    </div>
+                                                    <div id="carouselHeader">
+                                                        <h3>Project A</h3>
+                                                    </div>
+
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button class="btn-sm close" type="button" data-dismiss="modal">Back
+                                                        To Key Item</button>
+                                                </div>
                                             </div>
                                         </div>
-                                        <div class="gallery-item">
-                                            <div class="gallery-img-holder js-gallery-popup">
-                                                <img src="images/img-3.jpg" alt="" class="gallery-img">
+                                    </div>
+                                </div>
+                                <div class="box col-md-4 col">
+                                    <div class="content-text">
+                                        <h3>Toilet seats and support bars</h3>
+                                        <button class="read-text">
+                                            <i class="fa fa-play" aria-hidden="true"></i>
+                                            <i class="fa fa-pause hidden" aria-hidden="true"></i>
+                                            Read
+                                        </button>
+                                    </div>
+                                    <div class="panel panel-default fixed-width center-block" data-toggle="modal"
+                                        data-target="#projectA">
+                                        <div class="panel-body">
+                                            <a href="#">
+                                                <img class="img-responsive center-block" src="images/img-1.jpg" />
+                                            </a>
+                                        </div>
+                                        <div class="more-btn">
+                                            <button>View More</button>
+                                        </div>
+                                    </div>
+                                    <div class="modal fade" id="projectA">
+                                        <div class="modal-dialog">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <button type="button" class="close" data-dismiss="modal"
+                                                        title="Close"> <span
+                                                            class="glyphicon glyphicon-remove"></span></button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <div id="projectAsel" class="carousel slide project-slide"
+                                                        data-interval="false">
+                                                        <div class="carousel-inner">
+                                                            <div class="item active"> <img src="images/img-2.jpg"
+                                                                    alt="item1">
+                                                            </div>
+                                                            <div class="item"><img src="images/img-3.jpg" alt="item2">
+                                                            </div>
+                                                            <div class="item"> <img src="images/img-1.jpg" alt="item3">
+                                                            </div>
+                                                            <div class="item"> <img src="images/img-2.jpg" alt="item4">
+                                                            </div>
+                                                            <ol class="carousel-indicators">
+                                                                <li class="active" data-slide-to="0"
+                                                                    data-target="#projectAsel">
+                                                                    <img alt="" src="images/img-2.jpg">
+                                                                </li>
+                                                                <li class="" data-slide-to="1"
+                                                                    data-target="#projectAsel">
+                                                                    <img alt="" src="images/img-3.jpg">
+                                                                </li>
+                                                                <li class="" data-slide-to="2"
+                                                                    data-target="#projectAsel">
+                                                                    <img alt="" src="images/img-1.jpg">
+                                                                </li>
+                                                                <li class="" data-slide-to="3"
+                                                                    data-target="#projectAsel">
+                                                                    <img alt="" src="images/img-2.jpg">
+                                                                </li>
+                                                            </ol>
+                                                        </div>
+                                                        <a class="left carousel-control" href="#projectAsel"
+                                                            role="button" data-slide="prev"> <span
+                                                                class="glyphicon glyphicon-chevron-left"></span></a>
+                                                        <a class="right carousel-control" href="#projectAsel"
+                                                            role="button" data-slide="next"> <span
+                                                                class="glyphicon glyphicon-chevron-right"></span></a>
+                                                    </div>
+                                                    <div id="carouselHeader">
+                                                        <h3>Project A</h3>
+                                                    </div>
+
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button class="btn-sm close" type="button" data-dismiss="modal">Back
+                                                        To Key Item</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="box col-md-4 col">
+                                    <div class="content-text">
+                                        <h3>Toilet seats and support bars</h3>
+                                        <button class="read-text">
+                                            <i class="fa fa-play" aria-hidden="true"></i>
+                                            <i class="fa fa-pause hidden" aria-hidden="true"></i>
+                                            Read
+                                        </button>
+                                    </div>
+                                    <div class="panel panel-default fixed-width center-block" data-toggle="modal"
+                                        data-target="#projectA">
+                                        <div class="panel-body">
+                                            <a href="#">
+                                                <img class="img-responsive center-block" src="images/img-1.jpg" />
+                                            </a>
+                                        </div>
+                                        <div class="more-btn">
+                                            <button>View More</button>
+                                        </div>
+                                    </div>
+                                    <div class="modal fade" id="projectA">
+                                        <div class="modal-dialog">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <button type="button" class="close" data-dismiss="modal"
+                                                        title="Close"> <span
+                                                            class="glyphicon glyphicon-remove"></span></button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <div id="projectAsel" class="carousel slide project-slide"
+                                                        data-interval="false">
+                                                        <div class="carousel-inner">
+                                                            <div class="item active"> <img src="images/img-2.jpg"
+                                                                    alt="item1">
+                                                            </div>
+                                                            <div class="item"><img src="images/img-3.jpg" alt="item2">
+                                                            </div>
+                                                            <div class="item"> <img src="images/img-1.jpg" alt="item3">
+                                                            </div>
+                                                            <div class="item"> <img src="images/img-2.jpg" alt="item4">
+                                                            </div>
+                                                            <ol class="carousel-indicators">
+                                                                <li class="active" data-slide-to="0"
+                                                                    data-target="#projectAsel">
+                                                                    <img alt="" src="images/img-2.jpg">
+                                                                </li>
+                                                                <li class="" data-slide-to="1"
+                                                                    data-target="#projectAsel">
+                                                                    <img alt="" src="images/img-3.jpg">
+                                                                </li>
+                                                                <li class="" data-slide-to="2"
+                                                                    data-target="#projectAsel">
+                                                                    <img alt="" src="images/img-1.jpg">
+                                                                </li>
+                                                                <li class="" data-slide-to="3"
+                                                                    data-target="#projectAsel">
+                                                                    <img alt="" src="images/img-2.jpg">
+                                                                </li>
+                                                            </ol>
+                                                        </div>
+                                                        <a class="left carousel-control" href="#projectAsel"
+                                                            role="button" data-slide="prev"> <span
+                                                                class="glyphicon glyphicon-chevron-left"></span></a>
+                                                        <a class="right carousel-control" href="#projectAsel"
+                                                            role="button" data-slide="next"> <span
+                                                                class="glyphicon glyphicon-chevron-right"></span></a>
+                                                    </div>
+                                                    <div id="carouselHeader">
+                                                        <h3>Project A</h3>
+                                                    </div>
+
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button class="btn-sm close" type="button" data-dismiss="modal">Back
+                                                        To Key Item</button>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -928,7 +1873,6 @@
                             </div>
                         </div>
                     </div>
-                    <!-- </div> -->
                 </div>
 
                 <div class="modal fade lightbox-modal" id="lightbox-modal" tabindex="-1">
@@ -961,200 +1905,23 @@
         <div id="load-more"> load more </div>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-lightbox/0.2.12/slick-lightbox.min.js"></script>
-
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.4/jquery.touchSwipe.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"></script>
     <script>
-                $(document).ready(function () {
-            $('.js-gallery').slick({
-                slidesToShow: 1,
-                slidesToScroll: 1,
-                prevArrow: '<span class="gallery-arrow mod-prev">Prev</span>',
-                nextArrow: '<span class="gallery-arrow mod-next">Next</span>'
-            });
+        $(".carousel").swipe({
 
-            $('.js-gallery').slickLightbox({
-                src: 'src',
-                itemSelector: '.js-gallery-popup img',
-                background: 'rgba(0, 0, 0, .7)'
-            });
+            swipe: function (event, direction, distance, duration, fingerCount, fingerData) {
+
+                if (direction == 'left') $(this).carousel('next');
+                if (direction == 'right') $(this).carousel('prev');
+
+            },
+            allowPageScroll: "vertical"
+
         });
 
-
-
-    //     // light box
-    //     const html = document.querySelector('html');
-    //     html.setAttribute('data-bs-theme', 'dark');
-
-    //     document.addEventListener('DOMContentLoaded', () => {
-    //         // --- Create LightBox
-    //         const galleryGrid = document.querySelector(".gallery-grid");
-    //         const links = galleryGrid.querySelectorAll("a");
-    //         const imgs = galleryGrid.querySelectorAll("img");
-    //         const lightboxModal = document.getElementById("lightbox-modal");
-    //         const bsModal = new bootstrap.Modal(lightboxModal);
-    //         const modalBody = lightboxModal.querySelector(".lightbox-content");
-
-    //         function createCaption(caption) {
-    //             return `<div class="carousel-caption d-none d-md-block">
-    //     <h4 class="m-0">${caption}</h4>
-    //   </div>`;
-    //         }
-
-    //         function createIndicators(img) {
-    //             let markup = "", i, len;
-
-    //             const countSlides = links.length;
-    //             const parentCol = img.closest('.col');
-    //             const curIndex = [...parentCol.parentElement.children].indexOf(parentCol);
-
-    //             for (i = 0, len = countSlides; i < len; i++) {
-    //                 markup += `
-    //     <button type="button" data-bs-target="#lightboxCarousel"
-    //       data-bs-slide-to="${i}"
-    //       ${i === curIndex ? 'class="active" aria-current="true"' : ''}
-    //       aria-label="Slide ${i + 1}">
-    //     </button>`;
-    //             }
-
-    //             return markup;
-    //         }
-
-    //         function createSlides(img) {
-    //             let markup = "";
-    //             const currentImgSrc = img.closest('.gallery-item').getAttribute("href");
-
-    //             for (const img of imgs) {
-    //                 const imgSrc = img.closest('.gallery-item').getAttribute("href");
-    //                 const imgAlt = img.getAttribute("alt");
-
-    //                 markup += `
-    //     <div class="carousel-item${currentImgSrc === imgSrc ? " active" : ""}">
-    //       <img class="d-block img-fluid w-100" src=${imgSrc} alt="${imgAlt}">
-    //       ${imgAlt ? createCaption(imgAlt) : ""}
-    //     </div>`;
-    //             }
-
-    //             return markup;
-    //         }
-
-    //         function createCarousel(img) {
-    //             const markup = `
-    //   <!-- Lightbox Carousel -->
-    //   <div id="lightboxCarousel" class="carousel slide carousel-fade" data-bs-ride="true">
-    //     <!-- Indicators/dots -->
-    //     <div class="carousel-indicators">
-    //       ${createIndicators(img)}
-    //     </div>
-    //     <!-- Wrapper for Slides -->
-    //     <div class="carousel-inner justify-content-center mx-auto">
-    //       ${createSlides(img)}
-    //     </div>
-    //     <!-- Controls/icons -->
-    //     <button class="carousel-control-prev" type="button" data-bs-target="#lightboxCarousel" data-bs-slide="prev">
-    //       <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    //       <span class="visually-hidden">Previous</span>
-    //     </button>
-    //     <button class="carousel-control-next" type="button" data-bs-target="#lightboxCarousel" data-bs-slide="next">
-    //       <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    //       <span class="visually-hidden">Next</span>
-    //     </button>
-    //   </div>
-    //   `;
-
-    //             modalBody.innerHTML = markup;
-    //         }
-
-    //         for (const link of links) {
-    //             link.addEventListener("click", function (e) {
-    //                 e.preventDefault();
-    //                 const currentImg = link.querySelector("img");
-    //                 const lightboxCarousel = document.getElementById("lightboxCarousel");
-
-    //                 if (lightboxCarousel) {
-    //                     const parentCol = link.closest('.col');
-    //                     const index = [...parentCol.parentElement.children].indexOf(parentCol);
-
-    //                     const bsCarousel = new bootstrap.Carousel(lightboxCarousel);
-    //                     bsCarousel.to(index);
-    //                 } else {
-    //                     createCarousel(currentImg);
-    //                 }
-
-    //                 bsModal.show();
-    //             });
-    //         }
-
-    //         // --- Support Fullscreen
-    //         const fsEnlarge = document.querySelector(".btn-fullscreen-enlarge");
-    //         const fsExit = document.querySelector(".btn-fullscreen-exit");
-
-    //         function enterFS() {
-    //             lightboxModal.requestFullscreen().then({}).catch(err => {
-    //                 alert(`Error attempting to enable full-screen mode: ${err.message} (${err.name})`);
-    //             });
-    //             fsEnlarge.classList.toggle("d-none");
-    //             fsExit.classList.toggle("d-none");
-    //         }
-
-    //         function exitFS() {
-    //             document.exitFullscreen();
-    //             fsExit.classList.toggle("d-none");
-    //             fsEnlarge.classList.toggle("d-none");
-    //         }
-
-    //         fsEnlarge.addEventListener("click", (e) => {
-    //             e.preventDefault();
-    //             enterFS();
-    //         });
-
-    //         fsExit.addEventListener("click", (e) => {
-    //             e.preventDefault();
-    //             exitFS();
-    //         });
-    //     })
-
-
-
-
-    //     const carouselContainers = document.querySelectorAll(".carousel-container");
-
-    //     carouselContainers.forEach((container) => {
-    //         let slideIndex = 0;
-    //         const slides = container.querySelectorAll(".slide");
-    //         const prevButton = container.querySelector(".prev");
-    //         const nextButton = container.querySelector(".next");
-
-    //         function showSlides() {
-    //             for (let i = 0; i < slides.length; i++) {
-    //                 slides[i].style.display = "none";
-    //             }
-    //             if (slideIndex >= slides.length) {
-    //                 slideIndex = 0;
-    //             } else if (slideIndex < 0) {
-    //                 slideIndex = slides.length - 1;
-    //             }
-    //             slides[slideIndex].style.display = "block";
-    //         }
-
-    //         // Show next slide on next button click
-    //         nextButton.addEventListener("click", () => {
-    //             slideIndex++;
-    //             showSlides();
-    //         });
-
-    //         // Show previous slide on prev button click
-    //         prevButton.addEventListener("click", () => {
-    //             slideIndex--;
-    //             showSlides();
-    //         });
-
-    //         showSlides(); // Start the slideshow
-    //     });
-
-       // show the first 6 boxes
+        // show the first 6 boxes
         document.addEventListener('DOMContentLoaded', function () {
             let loadMoreBtn = document.querySelector('#load-more');
             let boxes = [...document.querySelectorAll('.container .box-container .box')];
